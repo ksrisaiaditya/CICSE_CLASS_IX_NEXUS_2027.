@@ -1036,7 +1036,7 @@ function updatePortal(){
     return;
   }
   const now=Date.now();
-  $('openingDateText').textContent='⭕ SCHEDULED OPENING : '+formatIST(OPEN_MS)+' ⭕ SCHEDULED CLOSING : '+formatIST(CLOSE_MS);
+  $('openingDateText').textContent='⭕ OPENING : '+formatIST(OPEN_MS)+' ⭕ CLOSING : '+formatIST(CLOSE_MS);
   $('closingDateText').textContent='⭕ PORTAL CLOSED ON : '+formatIST(CLOSE_MS);
   if(now<OPEN_MS){
     currentCandidate=null;
