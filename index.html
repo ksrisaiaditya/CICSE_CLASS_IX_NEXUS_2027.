@@ -1,4640 +1,1100 @@
 <!DOCTYPE html>
 <html lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=database-width, initial-scale=0.5, viewport-fit=cover" name="viewport"/>
-  <title>
-   CISCE CLASS – IX NEXUS TEST – 1 | 2027
-  </title>
-  <style>
-   :root {
-    --navy:#101a35;
-    --blue:#254a87;
-    --gold:#e3b85f;
-    --paper:#f3f6fc;
-    --ink:#182238;
-    --muted:#66738b;
-    --green:#12805c;
-    --red:#b42318;
-    --line:#dce3ef;
-    --white:#fff;
-    --glow:rgba(37,74,135,.16)
-}
-* {
-    box-sizing:border-box
-}
-html {
-    scroll-behavior:smooth
-}
-body {
-    margin:0;
-    background:radial-gradient(circle at 8% 0%,#e4ecfb 0,transparent 34%),radial-gradient(circle at 100% 12%,#fff1d6 0,transparent 25%),var(--paper);
-    color:var(--ink);
-    font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
-    line-height:1.55;
-    min-height:100vh
-}
-header {
-    position:relative;
-    overflow:hidden;
-    background:linear-gradient(120deg,#0c1530 0%,#1d376a 55%,#315aa0 100%);
-    color:gold;
-    padding:34px 16px 28px;
-    text-align:center;
-    border-bottom:10px solid var(--gold);
-    box-shadow:0 12px 32px #101d3a22
-}
-header:before,header:after {
-    content:"";
-    position:absolute;
-    border:50px solid #ffffff20;
-    border-radius:100%;
-    pointer-events:none
-}
-header:before {
-    width:260px;
-    height:260px;
-    top:-180px;
-    left:-60px
-}
-header:after {
-    width:320px;
-    height:320px;
-    right:-140px;
-    bottom:-240px
-}
-header h1 {
-    position:relative;
-    font-size:clamp(19px,3.2vw,30px);
-    line-height:1.25;
-    margin:0 0 10px;
-    letter-spacing:.8px;
-    font-weight:950
-}
-header p {
-    position:relative;
-    margin:5px;
-    font-size:18px;
-    letter-spacing:1.5px;
-    font-weight:1000;
-    color:gold
-}
-header k {
-    position:relative;
-    margin:5px;
-    font-size:14px;
-    letter-spacing:1.5px;
-    font-weight:1000;
-    color:white
-}
-header p:last-child {
-    display:inline-block;
-    margin-top:13px;
-    padding:8px 13px;
-    border:1px solid #ffffff35;
-    border-radius:30px;
-    background:#ffffff0d
-}
-.wrap {
-    max-width:980px;
-    margin:26px auto;
-    padding:0 14px
-}
-.panel,.examcard {
-    background:rgba(255,255,255,.96);
-    border:1px solid #d9e1ef;
-    border-radius:18px;
-    padding:clamp(18px,4vw,30px);
-    box-shadow:0 12px 35px #15284b0b;
-    margin-bottom:18px;
-    backdrop-filter:blur(8px)
-}
-.panel h2 {
-    margin:8px 0 12px;
-    font-size:clamp(21px,3vw,28px);
-    letter-spacing:-.4px
-}
-.hidden {
-    display:none!important
-}
-.eyebrow {
-    display:flex;
-    align-items:center;
-    gap:9px;
-    color:#51617e;
-    font-size:11px;
-    font-weight:850;
-    letter-spacing:1.5px;
-    text-transform:uppercase
-}
-.eyebrow:before {
-    content:"";
-    display:inline-block;
-    width:22px;
-    height:10px;
-    background:var(--gold);
-    border-radius:5px
-}
-.timer {
-    font-size:clamp(36px,8vw,58px);
-    font-weight:900;
-    letter-spacing:1px;
-    color:var(--navy);
-    font-variant-numeric:tabular-nums;
-    margin:14px 0
-}
-.notice {
-    background:linear-gradient(115deg,#fff8e8,#fffdf7);
-    border:1px solid #f1dfb8;
-    border-left:5px solid var(--gold);
-    padding:15px 17px;
-    border-radius:12px;
-    line-height:1.7;
-    font-size:14px
-}
-.row {
-    display:flex;
-    gap:12px;
-    flex-wrap:wrap
-}
-.row>* {
-    flex:1;
-    min-width:180px
-}
-label {
-    display:block;
-    font-size:12px;
-    font-weight:800;
-    letter-spacing:.45px;
-    margin:14px 0 7px;
-    color:#34415a
-}
-input,textarea {
-    width:100%;
-    padding:13px 14px;
-    border:1px solid #c8d2e2;
-    border-radius:10px;
-    font:inherit;
-    color:var(--ink);
-    background:#fbfcff;
-    outline:none;
-    transition:border-color .2s,box-shadow .2s
-}
-input:focus,textarea:focus {
-    border-color:#4b72b8;
-    box-shadow:0 0 0 4px var(--glow);
-    background:white
-}
-textarea {
-    min-height:180px;
-    resize:vertical
-}
-button {
-    border:1px solid transparent;
-    border-radius:10px;
-    padding:12px 17px;
-    font:inherit;
-    font-size:12px;
-    letter-spacing:.4px;
-    font-weight:850;
-    cursor:pointer;
-    background:linear-gradient(135deg,var(--blue),#315ca4);
-    color:white;
-    box-shadow:0 5px 13px #254a8724;
-    transition:transform .15s,box-shadow .15s,filter .15s
-}
-button:hover:not(:disabled) {
-    transform:translateY(-1px);
-    box-shadow:0 8px 18px #254a8730;
-    filter:brightness(1.04)
-}
-button:active:not(:disabled) {
-    transform:translateY(0)
-}
-button:disabled {
-    opacity:.48;
-    cursor:not-allowed;
-    box-shadow:none
-}
-.secondary {
-    background:#eef2f9;
-    color:var(--navy);
-    border-color:#dbe3f0;
-    box-shadow:none
-}
-.danger {
-    background:linear-gradient(135deg,#a82424,#d04438);
-    color:white
-}
-.status {
-    font-size:13px;
-    color:var(--muted);
-    margin-top:12px;
-    min-height:18px;
-    overflow-wrap:anywhere
-}
-.progress {
-    height:9px;
-    background:#e8edf6;
-    border-radius:20px;
-    overflow:hidden;
-    margin:15px 0
-}
-.progress span {
-    height:100%;
-    display:block;
-    background:linear-gradient(90deg,var(--gold),#f1d18a);
-    width:0;
-    transition:width .2s;
-    border-radius:20px
-}
-.questiontop {
-    display:flex;
-    justify-content:space-between;
-    gap:9px;
-    align-items:center;
-    flex-wrap:wrap
-}
-.pill {
-    background:#eef2fa;
-    color:#263d68;
-    padding:8px 11px;
-    border:1px solid #dce4f1;
-    border-radius:30px;
-    font-size:11px;
-    font-weight:850;
-    letter-spacing:.3px
-}
-.qtitle {
-    font-size:clamp(18px,3vw,23px);
-    line-height:1.55;
-    margin:23px 0 18px;
-    font-weight:750;
-    letter-spacing:-.25px
-}
-.option {
-    display:flex;
-    gap:12px;
-    align-items:flex-start;
-    border:1px solid var(--line);
-    border-radius:12px;
-    padding:14px;
-    margin:9px 0;
-    cursor:pointer;
-    background:#fff;
-    transition:border-color .15s,background .15s
-}
-.option:hover {
-    border-color:#8ea6d0;
-    background:#f7f9fe
-}
-.option:has(input:checked) {
-    border-color:#456eb2;
-    background:#f0f5ff;
-    box-shadow:0 0 0 2px #456eb21a
-}
-.option input {
-    width:auto;
-    margin-top:5px;
-    accent-color:var(--blue)
-}
-.nav {
-    display:flex;
-    gap:9px;
-    justify-content:space-between;
-    flex-wrap:wrap;
-    margin-top:20px
-}
-.nav button {
-    flex:1;
-    min-width:145px
-}
-.small {
-    font-size:12px;
-    color:#68758b;
-    line-height:1.65
-}
-.gridnav {
-    display:flex;
-    gap:7px;
-    flex-wrap:wrap;
-    margin-top:14px
-}
-.gridnav button {
-    padding:8px 11px;
-    font-size:11px;
-    min-width:37px
-}
-.answered {
-    background:var(--green)!important;
-    color:white!important;
-    border-color:var(--green)!important
-}
-.footer {
-    text-align:center;
-    font-size:10px;
-    color:#738097;
-    padding:24px 16px 30px;
-    letter-spacing:.6px
-}
-.examcard hr {
-    border:0;
-    border-top:1px solid #e7ebf3;
-    margin:22px 0
-}
-.examcard .eyebrow {
-    margin-top:8px
-}
-@media(max-width:560px) {
-    header {
-        padding:25px 13px 22px
-    }
-    .wrap {
-        margin:16px auto;
-        padding:0 10px
-    }
-    .panel,.examcard {
-        border-radius:14px;
-        padding:18px 15px
-    }
-    .row>* {
-        min-width:100%
-    }
-    .questiontop {
-        align-items:stretch
-    }
-    .pill {
-        flex:1;
-        text-align:center
-    }
-    .nav {
-        gap:8px
-    }
-    .nav button {
-        min-width:100%;
-        padding:13px
-    }
-    .gridnav button {
-        flex:0 0 auto
-    }
-    .notice {
-        font-size:13px;
-        padding:12px
-    }
-    .qtitle {
-        margin:18px 0 14px
-    }
-}
-@media(prefers-reduced-motion:reduce) {
-    * {
-        scroll-behavior:auto!important;
-        transition:none!important
-    }
-}
-
-/* VERTICAL LAYOUT — KEEP CONTENT EASY TO READ ON PHONES */
-#questionNav {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 8px;
-}
-#questionNav button {
-    width: 100%;
-    min-height: 42px;
-    text-align: left;
-    padding: 10px 14px;
-}
-#answerArea {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 8px;
-}
-#answerArea .option {
-    width: 100%;
-    margin: 0;
-}
-#answerArea textarea {
-    display: block;
-    width: 100%;
-    min-height: 180px;
-}
-.row, .nav, .gridnav {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-}
-.row > *, .nav button, .gridnav button {
-    width: 100%;
-    min-width: 0;
-}
-.gridnav button {
-    text-align: left;
-}
-
-.prelaunch-panel {
-  border:1px solid #d8e1f0;
-  background:linear-gradient(145deg,#ffffff,#f7f9ff,#fffaf0);
-  padding:clamp(22px,5vw,42px);
-  overflow:hidden;
-}
-
-.prelaunch-emblem {
-  width:56px;
-  height:56px;
-  margin:20px auto;
-  display:grid;
-  place-items:center;
-  border-radius:50%;
-  background:#fff5dc;
-  border:1px solid #e5c77f;
-  color:#8a6420;
-  font-size:28px;
-}
-
-.prelaunch-heading {
-  color:#14264b;
-  margin:8px 0!important;
-}
-
-.prelaunch-subtitle {
-  font-size:11px;
-  font-weight:900;
-  letter-spacing:1.2px;
-  color:#9a742c;
-}
-
-.prelaunch-rule {
-  height:2px;
-  width:80px;
-  margin:20px auto;
-  background:#d8b45e;
-}
-
-.prelaunch-message {
-  font-weight:950;
-  color:#254a87;
-  letter-spacing:.6px;
-}
-
-.prelaunch-timer-label {
-  font-size:11px;
-  font-weight:900;
-  letter-spacing:1.5px;
-  margin-top:25px;
-  color:#66738b;
-}
-
-.prelaunch-panel .timer {
-  font-size:clamp(38px,9vw,64px);
-  color:#14264b;
-  font-variant-numeric:tabular-nums;
-}
-
-.prelaunch-status {
-  font-size:12px;
-  font-weight:850;
-  color:#9a742c;
-}
-
-.prelaunch-grid {
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:9px;
-  margin-top:25px;
-}
-
-.prelaunch-grid>div {
-  padding:13px 7px;
-  border:1px solid #e1e7f1;
-  border-radius:12px;
-  background:#fff;
-}
-
-.prelaunch-grid strong,
-.prelaunch-grid span {
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=0.5, viewport-fit=cover">
+<meta name="theme-color" content="#1d376a">
+<title>CISCE CLASS – IX RESULTS PORTAL : 2027</title>
+<style>
+:root{--navy:#101a35;--blue:#254a87;--gold:#e3b85f;--paper:#f3f6fc;--ink:#182238;--muted:#66738b;--line:#dce3ef;--white:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-height:100vh;background:radial-gradient(circle at 8% 0%,#e4ecfb 0,transparent 34%),radial-gradient(circle at 100% 12%,#fff1d6 0,transparent 25%),var(--paper);color:var(--ink);font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;line-height:1.55;text-transform:uppercase}body *{text-transform:uppercase}
+header{position:relative;overflow:hidden;background:linear-gradient(120deg,#0c1530 0%,#1d376a 55%,#315aa0 100%);color:gold;padding:34px 16px 28px;text-align:center;border-bottom:10px solid var(--gold);box-shadow:0 12px 32px #101d3a22}header:before,header:after{content:"";position:absolute;border:50px solid #ffffff20;border-radius:100%;pointer-events:none}header:before{width:260px;height:260px;top:-180px;left:-60px}header:after{width:320px;height:320px;right:-140px;bottom:-240px}header h1{position:relative;font-size:clamp(19px,3.2vw,30px);line-height:1.25;margin:0 0 10px;letter-spacing:.8px;font-weight:950}header p{position:relative;margin:5px;font-size:clamp(12px,2vw,17px);letter-spacing:1.2px;font-weight:950;color:gold}
+.wrap{width:min(980px,100% - 24px);margin:26px auto}.panel{background:rgba(255,255,255,.97);border:1px solid #d9e1ef;border-radius:18px;padding:clamp(18px,4vw,30px);box-shadow:0 12px 35px #15284b0b;margin-bottom:18px}.panel h2{margin:8px 0 12px;font-size:clamp(21px,3vw,28px)}.hidden{display:none!important}.eyebrow{display:flex;align-items:center;gap:9px;color:#51617e;font-size:20px;font-weight:850;letter-spacing:1.5px}.eyebrow:before{content:"";display:inline-block;width:22px;height:10px;background:var(--gold);border-radius:5px}label{display:block;font-size:12px;font-weight:800;letter-spacing:.45px;margin:14px 0 7px;color:#34415a}input{width:100%;padding:13px 14px;border:1px solid #c8d2e2;border-radius:10px;font:inherit;color:var(--ink);background:#fbfcff;outline:none}input:focus{border-color:#4b72b8;box-shadow:0 0 0 4px #254a8729;background:white}.row{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px}button{width:100%;border:1px solid transparent;border-radius:10px;padding:13px 17px;font:inherit;font-size:12px;letter-spacing:.4px;font-weight:850;cursor:pointer;background:linear-gradient(135deg,var(--blue),#315ca4);color:white;box-shadow:0 5px 13px #254a8724}button:disabled{opacity:.5;cursor:not-allowed}.secondary{background:#eef2f9;color:var(--navy);border-color:#dbe3f0;box-shadow:none}.small{font-size:15px;color:#68758b;line-height:1.65}.status{font-size:13px;color:var(--muted);margin-top:12px;min-height:20px;overflow-wrap:anywhere}.notice{background:linear-gradient(115deg,#fff8e8,#fffdf7);border:1px solid #f1dfb8;border-left:5px solid var(--gold);padding:15px 17px;border-radius:12px;line-height:1.7;font-size:14px}.gate{text-align:center;border:1px solid #d8e1f0;background:linear-gradient(145deg,#fff,#f7f9ff,#fffaf0);padding:clamp(22px,5vw,42px)}.emblem{
+  width:110px;
+  height:110px;
+  object-fit:contain;
   display:block;
-}
-
-.prelaunch-grid strong {
-  color:#1d376a;
-  font-size:14px;
-}
-
-.prelaunch-grid span {
-  color:#738097;
-  font-size:9px;
-  font-weight:900;
-  margin-top:5px;
-}
-
-@media(max-width:480px) {
-  .prelaunch-grid {
-    grid-template-columns:1fr;
-  }
-}
-/* READ-ONLY QUESTION PAPER DURING THE READING WINDOW */
-.reading-paper{margin-top:22px;padding:18px;border:1px solid #dbe2ee;border-radius:16px;background:#fff;color:#17233b;text-align:left;max-height:58vh;overflow:auto}
-.reading-paper .paper-question{padding:14px 0;border-bottom:1px solid #e7ebf2;line-height:1.55}
-.reading-paper .paper-question:last-child{border-bottom:0}
-.reading-paper .paper-question strong{display:block;margin-bottom:8px;color:#17233b}
-.reading-paper .paper-option{display:block;padding:3px 0 3px 12px;color:#39465c}
-.reading-paper .paper-part{margin:18px 0 8px;padding:9px 12px;border-radius:8px;background:#edf2fa;color:#1d376a;font-weight:900}
-#submitBtn:disabled{opacity:.48;cursor:not-allowed;filter:grayscale(.35)}
-/* GLOBAL TYPOGRAPHY — ALL TEXT IN UPPERCASE */
-body, body * {
-    text-transform: uppercase !important;
-}
-  </style>
- </head>
- <body>
-  <header>
-   <h1>
-    CISCE CLASS – IX NEXUS EXAMINATION : 2027
-   </h1>
-   <p>
-    NEXUS TEST – 1 | COMPETENCY ASSESSMENT
-   </p>
-   <k>
-    MAXIMUM MARKS : 100   |   WRITING TIME : 3 HOURS
-   </k>
-  </header>
-  <main class="wrap">
-   <section class="panel" id="authPanel">
-    <div class="eyebrow">CANDIDATE'S AUTHENTICATION</div>
-    <h2>🔒 CANDIDATE'S LOGIN CREDENTIALS 🔒</h2>
-    <p class="small">PLEASE ENTER YOUR 12–DIGIT HALL TICKET NUMBER AS YOUR USERNAME AND YOUR DATE OF BIRTH IN (DD/MM/YYYY) FORMAT AS YOUR PASSWORD.</p>
-    <label for="hallTicket">USERNAME — CISCE CLASS – IX HALL TICKET NUMBER</label>
-    <input autocomplete="username" id="hallTicket" inputmode="numeric" maxlength="12" placeholder="Enter your 12-digit Hall Ticket Number" required="" type="text" />
-    <label for="dobPassword">PASSWORD — DATE OF BIRTH (DDMMYYYY)</label>
-    <input autocomplete="current-password" id="dobPassword" maxlength="10" placeholder="Enter your DOB – (DDMMYYYY)" required="" type="password" />
-    <label for="candidateEmail">EMAIL ID — MANDATORY, FOR RECEIVING YOUR RESPONSE COPY</label>
-    <input autocomplete="email" id="candidateEmail" inputmode="email" maxlength="120" placeholder="Enter your EMAIL ID" required type="email" />
-    <div class="row" style="margin-top:16px"><button id="loginBtn">LOGIN TO NEXUS TEST – 1 EXAMINATION</button></div>
-    <div class="status" id="authStatus"></div>
-    <p class="small"></p>
-   </section>
-   
-<!-- PRE-EXAMINATION COUNTDOWN PANEL -->
-<section class="panel hidden prelaunch-panel" id="preExamPanel" style="text-align:center">
-
-  <div class="eyebrow" style="justify-content:center">
-    OFFICIAL EXAMINATION COMMENCEMENT NOTICE
-  </div>
-
-  <div class="prelaunch-emblem">✦</div>
-
-  <h2 class="prelaunch-heading">WELCOME TO NEXUS TEST – 1</h2>
-
-  <p class="prelaunch-subtitle">
-    CISCE CLASS – IX NEXUS EXAMINATION : 2027
-  </p>
-
-  <div class="prelaunch-rule"></div>
-
-  <p class="prelaunch-message">
-    THE EXAMINATION PORTAL IS CURRENTLY IN PRE-LOGIN MODE.
-  </p>
-
-  <p class="small">
-    CANDIDATE LOGIN SERVICES WILL BE ENABLED AUTOMATICALLY
-    AT THE SCHEDULED TIME. PLEASE KEEP YOUR EXAMINATION
-    CREDENTIALS READY.
-  </p>
-
-  <div class="prelaunch-timer-label">CANDIDATE LOGIN OPENS IN</div>
-
-  <div class="timer" id="gateTimer">00:00:00</div>
-
-  <div class="prelaunch-status" id="gateStatus">
-    CANDIDATE LOGIN OPENS AT 9:40 A.M. (IST).
-  </div>
-
-  <div class="prelaunch-grid">
-    <div>
-      <strong>09:40 A.M.</strong>
-      <span>CANDIDATE LOGIN</span>
-    </div>
-    <div>
-      <strong>09:45 A.M.</strong>
-      <span>READING PERIOD</span>
-    </div>
-    <div>
-      <strong>10:00 A.M.</strong>
-      <span>WRITING SESSION</span>
-    </div>
-  </div>
-
-  <div class="notice" style="text-align:left;margin-top:20px">
-    <b>IMPORTANT CANDIDATE ADVISORY</b><br>
-    • THE LOGIN DASHBOARD WILL REMAIN HIDDEN UNTIL 9:40 A.M.<br>
-    • THE QUESTION PAPER WILL BE DISPLAYED IN READ-ONLY MODE FROM 9:45 A.M.<br>
-    • THE READING PERIOD WILL END AT 10:00 A.M.<br>
-    • THE WRITING SESSION WILL BEGIN AUTOMATICALLY.<br>
-    • KEEP THIS PAGE OPEN FOR AUTOMATIC EXAMINATION TRANSITIONS.
-  </div>
-
-  <p class="small" style="margin-top:20px">
-    WISHING ALL CANDIDATES THE VERY BEST.
-    STAY CALM, THINK CLEARLY AND GIVE YOUR BEST PERFORMANCE.
-  </p>
-
+  margin:20px auto;
+  background:transparent;
+  border:none;
+  border-radius:0;
+}.timer{font-size:clamp(34px,8vw,58px);font-weight:950;letter-spacing:1px;color:#14264b;font-variant-numeric:tabular-nums;margin:14px 0}.gate-sub{font-size:20px;font-weight:900;letter-spacing:1.2px;color:#9a742c}.footer{text-align:center;font-size:10px;color:#738097;padding:18px 16px 28px;letter-spacing:.5px}
+.result-card{border:1px solid #d9e1ef;background:linear-gradient(145deg,#fff,#f7f9ff);border-radius:18px;padding:clamp(18px,4vw,32px);text-align:center}.result-score{font-size:clamp(50px,12vw,82px);font-weight:950;line-height:1.1;color:#14264b;margin:14px 0}.result-meta{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:22px 0}.result-meta>div{padding:14px;border:1px solid #e1e7f1;border-radius:12px;background:#fff}.result-meta strong,.result-meta span{display:block}.result-meta strong{font-size:18px;color:#1d376a;overflow-wrap:anywhere}.result-meta span{font-size:10px;color:#738097;font-weight:900;margin-top:4px}.result-stamp{display:inline-block;border:1px solid #d8b45e;background:#fff8e8;color:#805f1f;border-radius:30px;padding:12px 18px;font-size:clamp(14px,3vw,20px);font-weight:950;letter-spacing:1px}.grade-scale{margin:18px 0;padding:18px;border:1px solid #d9e1ef;border-radius:14px;background:#fff;text-align:left}.grade-scale h3{margin:0 0 6px;color:#14264b;font-size:16px}.grade-scale p{margin:0 0 13px;color:#66738b;font-size:11px;font-weight:700}.grade-scale-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.grade-scale-item{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 12px;border:1px solid #e1e7f1;border-radius:9px;background:#f9fbff;font-size:12px;font-weight:850}.grade-scale-item strong{color:#1d376a;font-size:14px}
+@media(max-width:560px){header{padding:25px 13px 22px}.wrap{margin:16px auto}.panel{border-radius:14px;padding:18px 15px}.notice{font-size:13px;padding:12px}.result-meta,.grade-scale-grid{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+<header><h1>CISCE CLASS – IX RESULTS PORTAL : 2027</h1><p>OFFICIAL CANDIDATE RESULT ACCESS</p></header>
+<main class="wrap">
+<section class="panel gate" id="openingPanel">
+ <div class="eyebrow" style="justify-content:center">OFFICIAL CISCE website RESULTS PORTAL NOTICE</div><img class="emblem" src="logo.png" alt="CISCE LOGO">
+ <h2>WELCOME TO THE CISCE CLASS – IX RESULTS PORTAL</h2>
+ <p class="gate-sub">CISCE CLASS – IX NEXUS EXAMINATION : 2027</p>
+ <p class="small">CANDIDATE RESULT ACCESS WILL BE ENABLED AUTOMATICALLY AT THE SCHEDULED OPENING TIME.</p>
+ <div class="gate-sub" id="gateCaption">RESULTS PORTAL OPENS IN</div><div class="timer" id="gateTimer">--:--:--</div>
+ <p class="small" id="openingDateText"></p>
+ <p class="small">WISHING ALL CANDIDATES THE VERY BEST for their FUTURE ENDEAVOURS.</p>
 </section>
-
-<!-- POST-LOGIN WAITING PANEL -->
-<section class="panel hidden" id="waitPanel" style="text-align:center">
-
-  <div class="eyebrow" style="justify-content:center">
-    CANDIDATE AUTHENTICATION SUCCESSFUL
-  </div>
-
-  <h2 id="waitTitle">QUESTION PAPER ACCESS OPENS IN</h2>
-
-  <p class="small" id="waitMessage">
-    PLEASE WAIT FOR THE SCHEDULED READING PERIOD.
-  </p>
-
-  <div class="timer" id="waitTimer">00:00:00</div>
-
-  <div class="notice">
-    THE QUESTION PAPER WILL BE DISPLAYED IN READ-ONLY MODE FROM 9:45 A.M.
-    THE ANSWERING INTERFACE WILL REMAIN LOCKED UNTIL 10:00 A.M.
-    PLEASE KEEP THIS PAGE OPEN.
-  </div>
-
+<section class="panel hidden" id="authPanel">
+ <div class="eyebrow">CANDIDATE'S AUTHENTICATION</div>
+ <h2>🔒 CANDIDATE'S LOGIN CREDENTIALS 🔒</h2>
+ <p class="small">PLEASE ENTER YOUR 12-DIGIT HALL TICKET NUMBER AS YOUR USERNAME AND YOUR DATE OF BIRTH IN (DD/MM/YYYY) FORMAT AS YOUR PASSWORD. EMAIL ID IS NOT REQUIRED.</p>
+ <label for="hallTicket">USERNAME — CISCE CLASS – IX HALL TICKET NUMBER</label>
+ <input autocomplete="username" id="hallTicket" inputmode="numeric" maxlength="12" placeholder="ENTER YOUR 12-DIGIT HALL TICKET NUMBER" required type="text">
+ <label for="dobPassword">PASSWORD — DATE OF BIRTH (DDMMYYYY)</label>
+ <input autocomplete="current-password" id="dobPassword" maxlength="10" placeholder="ENTER YOUR DOB – (DDMMYYYY)" required type="password">
+ <div class="row"><button id="loginBtn" type="button">VIEW MY RESULT</button></div><div class="status" id="authStatus" role="status" aria-live="polite"></div>
 </section>
+<section class="panel hidden" id="resultPanel">
+    <div class="eyebrow">CANDIDATE RESULT RECORD DASHBOARD</div>
+    <div class="result-card">
+     <div class="result-stamp">CISCE CLASS – IX BOARD final RESULT</div>
+     <h2 style="margin-top:18px">CISCE CLASS – IX NEXUS TEST – I : 2027</h2>
+     <p class="small" id="resultCandidate"></p>
+     <div class="result-score"><span id="resultMarks">--</span><span style="font-size:25px"> / 100</span></div>
+     <div class="result-meta">
+      <div><strong id="resultPercentage">--%</strong><span>TOTAL PERCENTAGE</span></div>
+      <div><strong id="resultGrade">--</strong><span>final GRADE AWARDED</span></div>
+      <div><strong>100</strong><span>MAXIMUM MARKS FOR THE EXAMINATION</span></div>
+      <div><strong>CENTRALLY EVALUATED</strong><span> FINAL RESULT STATUS</span></div>
+      <div><strong>DIGITALLY AUTHENTICATED</strong><span> CHIEF COORDINATOR'S SIGNATURE</span></div>
+      <div><strong id="resultReference">NEXUS-2027</strong><span>PERMANENT final RECORD ID</span></div>
+     </div>
+     <div class="notice" style="text-align:left">
+      <b>RESULT RECORD NOTICE :</b><br>
+      <div style="height:15px;"> </div>
+      YOUR RESULT HAS BEEN FINALLY DECLARED AND FORMALLY RECORDED. THE MARKS ASSIGNED TO YOUR HALL TICKET NUMBER ARE PERMANENT AND CONCLUSIVE – NO FURTHER ALTERATIONS, REVISIONS OR MODIFICATIONS SHALL BE PERMITTED. WE EXTEND OUR BEST WISHES FOR YOUR FUTURE ACADEMIC ENDEAVOURS.
+     </div>
+    </div>
+    <div class="grade-scale" aria-label="GRADE CLASSIFICATION">
+     <h3>GRADE CLASSIFICATION</h3>
+     <p>FOR CANDIDATE REFERENCE – THE GRADE IS DETERMINED BY THE MARKS OBTAINED.</p>
+     <div class="grade-scale-grid">
+      <div class="grade-scale-item"><span>90–100 MARKS</span><strong>A</strong></div>
+      <div class="grade-scale-item"><span>80–89 MARKS</span><strong>B</strong></div>
+      <div class="grade-scale-item"><span>70–79 MARKS</span><strong>C</strong></div>
+      <div class="grade-scale-item"><span>60–69 MARKS</span><strong>D</strong></div>
+      <div class="grade-scale-item"><span>50–59 MARKS</span><strong>E</strong></div>
+      <div class="grade-scale-item"><span>40–49 MARKS</span><strong>P</strong></div>
+      <div class="grade-scale-item"><span>30–39 MARKS</span><strong>F</strong></div>
+      <div class="grade-scale-item"><span>0–29 MARKS</span><strong>F</strong></div>
+     </div>
+    </div>
+    <p class="small" style="text-align:center;margin-top:16px">🥇CHAIRMAN AND CHIEF COORDINATOR, CISCE CLASS – IX BOARD 🥇</p>
+    <div style="height:25px;"> </div>
+    <button class="secondary" id="resultSignoutBtn" type="button">SIGN OUT</button>
+   </section>
+<section class="panel gate hidden" id="closedPanel">
+ <div class="eyebrow" style="justify-content:center">OFFICIAL PORTAL CLOSURE NOTICE</div><img class="emblem" src="logo.png" alt="CISCE LOGO">
+ <h2>RESULTS PORTAL ACCESS HAS CLOSED</h2>
+ <p class="small">THE OFFICIAL RESULTS PORTAL WINDOW HAS ENDED. NO FURTHER CANDIDATE ACCESS IS AVAILABLE.</p>
+ <p class="small" id="closingDateText"></p>
+</section>
+</main>
+<div class="footer">CISCE CLASS – IX NEXUS EXAMINATION : 2027 · KEEP YOUR LOGIN CREDENTIALS CONFIDENTIAL, DON'T SHARE YOUR CREDENTIALS TO ANY THIRD – PARTY AUTHORITIES.</div>
+<script>
+// ============================================================
+// OFFICIAL PORTAL SCHEDULE — INDIA STANDARD TIME (IST, UTC+05:30)
+// EDIT ONLY THESE TWO VALUES TO SET THE REQUIRED ACCESS WINDOW.
+// FORMAT: YYYY-MM-DDTHH:MM:SS+05:30
+// ============================================================
+const PORTAL_OPENS_AT = '2026-11-24T09:00:00+05:30';
+const PORTAL_CLOSES_AT = '2026-12-25T23:59:59+05:30';
 
-   <section class="panel hidden" id="welcomePanel">
-    <div class="eyebrow">
-     CANDIDATE DETAILS AS PER THE CISCE RECORDS :
-    </div>
-    <h2 id="welcomeTitle">
-     Welcome
-    </h2>
-    <p id="accountEmail">
-    </p>
-    <div class="notice">
-     <b>
-      EXAMINATION INSTRUCTIONS
-     </b>
-     <br/>
-     • LOGIN OPENS AT 9:40 A.M. (IST). THE QUESTION PAPER IS DISPLAYED IN READ-ONLY MODE FROM 9:45 A.M. (IST).
-     <br/>
-     • READING TIME: 9:45 A.M. TO 10:00 A.M. THE QUESTION PAPER IS DISPLAYED IN READ-ONLY MODE. THE ANSWERING INTERFACE AND 3-HOUR WRITING TIMER BEGIN AUTOMATICALLY AT 10:00 A.M.
-     <br/>
-     • THE PAPER CONTAINS 100 OBJECTIVE QUESTIONS. EACH QUESTION CARRIES 1 MARK. TOTAL: 100 MARKS. NO SUBJECTIVE TYPING IS PERMITTED.
-     <br/>
-     • SELECT ONE OPTION FOR EACH QUESTION. RESPONSES ARE AUTOSAVED IN THIS PORTAL ON THIS database. MANUAL SUBMISSION OPENS AT 11:00 A.M. (IST). AUTOMATIC SUBMISSION OCCURS AT 1:00 P.M. (IST).
-     <br/>
-     • ALL QUESTIONS ARE OBJECTIVE TYPE. EACH QUESTION CARRIES 1 MARK. THERE IS NO NEGATIVE MARKING.
-     <br/>
-     • EXAMINATION DATE: NOVEMBER 22, 2026. LOGIN: 9:40 A.M. | READING: 9:45–10:00 A.M. | WRITING: 10:00 A.M.–1:00 P.M. (IST).
-     <br/>
-    </div>
-    <div class="status" id="savedInfo">
-    </div>
-    <button id="startBtn" style="margin-top:14px">
-     WAIT FOR THE AUTOMATIC EXAMINATION SCHEDULE
-    </button>
-    <button class="secondary" id="signoutBtn" style="margin-top:14px">
-     SIGN OUT OF THE PORTAL SERVICES
-    </button>
-   </section>
-   <section class="panel hidden" id="readingPanel">
-    <div class="eyebrow">OFFICIAL READING PERIOD — QUESTION PAPER DISPLAY</div>
-    <h2 style="text-align:center">QUESTION PAPER — READ ONLY</h2>
-    <p class="small" style="text-align:center">THE COMPLETE QUESTION PAPER IS AVAILABLE FOR READING. ANSWER SELECTION, RESPONSE SAVING AND SUBMISSION ARE LOCKED UNTIL 10:00 A.M. (IST).</p>
-    <div class="timer" id="readingTimer" style="text-align:center">15:00</div>
-    <div class="progress"><span id="readingProgress"></span></div>
-    <div class="notice" style="text-align:center">READING PERIOD ENDS AT 10:00 A.M. (IST). THE ANSWERING INTERFACE WILL OPEN AUTOMATICALLY.</div>
-    <p class="status" id="readingStatus" style="text-align:center">READING PERIOD IN PROGRESS.</p>
-    <div id="readingPaperPreview" class="reading-paper" aria-label="Question paper for reading"></div>
-   </section>
-   <section class="examcard hidden" id="examPanel">
-    <div class="questiontop">
-     <span class="pill" id="partPill">
-      PART I
-     </span>
-     <span class="pill" id="qCount">
-      QUESTION 1 OF 100
-     </span>
-     <span class="pill">
-      TIME LEFT
-      <span id="writingTimer">
-       03:00:00
-      </span>
-     </span>
-    </div>
-    <div class="progress">
-     <span id="examProgress">
-     </span>
-    </div>
-    <div class="eyebrow" id="partName">
-    </div>
-    <div class="qtitle" id="questionText">
-    </div>
-    <div id="answerArea">
-    </div>
-    <div class="small" id="saveState">
-     YOUR RESPONSE WILL BE SAVED ON THIS database.
-    </div>
-    <div class="nav">
-     <button class="secondary" id="prevBtn">
-      ← PREVIOUS
-     </button>
-     <button id="nextBtn">
-      NEXT QUESTION →
-     </button>
-    </div>
-    <hr style="border:0;border-top:1px solid #e5e9f1;margin:20px 0"/>
-    <div class="eyebrow">
-     QUESTION NAVIGATION
-    </div>
-    <div class="gridnav" id="questionNav">
-    </div>
-    <div class="nav">
-     <button class="danger" id="submitBtn">
-      FINAL SUBMISSION
-     </button>
-    </div>
-    <p class="small">
-     Final submission locks the response. The timer submits automatically when the writing period ends.
-    </p>
-   </section>
-   <section class="panel hidden" id="donePanel">
-    <div class="eyebrow">
-     SUBMISSION STATUS
-    </div>
-    <h2 id="doneTitle">
-     Response Submitted
-    </h2>
-    <p id="doneMessage">
-     Your response has been recorded.
-    </p>
-    <p class="small" id="receipt">
-    </p>
-    <div class="row" id="submissionActions" style="display:flex;flex-wrap:wrap;gap:12px;margin-top:18px">
-     <button id="emailCopyBtn" class="secondary" type="button">EMAIL MY RESPONSE COPY</button>
-     <button id="retakeBtn" type="button">RETAKE THE SAME EXAMINATION</button>
-    </div>
-    <p class="small" id="retakeNotice">RETAKES ARE PERMITTED ONLY BEFORE 1:00 P.M. (IST). ALL ATTEMPTS SHARE THE OFFICIAL 1:00 P.M. CLOSING TIME.</p>
-   </section>
-  </main>
-  <div class="footer">
-   CISCE CLASS – IX NEXUS EXAMINATION : 2027 · TEST 1 · KEEP YOUR LOGIN CREDENTIALS CONFIDENTIAL, DON'T SHARE YOUR CREDENTIALS TO ANY THIRD – PARTY AUTHORITIES.
-  </div>
-  <script>
-const questions = [
-    {
-        "id": 1,
-        "section": 1,
-        "sectionTitle": "PART I — OBJECTIVE THINKING",
-        "type": "mcq",
-        "prompt": "A notice states that forms must be submitted “within 48 hours of receipt”. A form received at 3:20 p.m. on Monday is due by:",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. 3:20 p.m. Tuesday",
-                "value": "A"
-            },
-            {
-                "label": "B. 3:20 p.m. Wednesday",
-                "value": "B"
-            },
-            {
-                "label": "C. Midnight Tuesday",
-                "value": "C"
-            },
-            {
-                "label": "D. 9:00 a.m. Wednesday",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 2,
-        "section": 1,
-        "sectionTitle": "PART I — OBJECTIVE THINKING",
-        "type": "mcq",
-        "prompt": "Find the next term: 3, 8, 15, 24, 35, __.",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. 44",
-                "value": "A"
-            },
-            {
-                "label": "B. 46",
-                "value": "B"
-            },
-            {
-                "label": "C. 48",
-                "value": "C"
-            },
-            {
-                "label": "D. 50",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 3,
-        "section": 1,
-        "sectionTitle": "PART I — OBJECTIVE THINKING",
-        "type": "mcq",
-        "prompt": "All sealed boxes are labelled. Box P is not labelled. Which conclusion is logically certain?",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. P is empty",
-                "value": "A"
-            },
-            {
-                "label": "B. P is not sealed",
-                "value": "B"
-            },
-            {
-                "label": "C. P contains fragile items",
-                "value": "C"
-            },
-            {
-                "label": "D. P was misplaced",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 4,
-        "section": 1,
-        "sectionTitle": "PART I — OBJECTIVE THINKING",
-        "type": "mcq",
-        "prompt": "A chart records 18, 24, 21 and 27 participants across four days. The mean is:",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. 21",
-                "value": "A"
-            },
-            {
-                "label": "B. 22.5",
-                "value": "B"
-            },
-            {
-                "label": "C. 23",
-                "value": "C"
-            },
-            {
-                "label": "D. 24",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 5,
-        "section": 1,
-        "sectionTitle": "PART I — OBJECTIVE THINKING",
-        "type": "mcq",
-        "prompt": "A route is 4 blocks east, 3 north, 4 west and 1 south. Relative to the start, the destination is:",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. 2 blocks north",
-                "value": "A"
-            },
-            {
-                "label": "B. 2 blocks south",
-                "value": "B"
-            },
-            {
-                "label": "C. 3 blocks north",
-                "value": "C"
-            },
-            {
-                "label": "D. At the start",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 6,
-        "section": 1,
-        "sectionTitle": "PART I — OBJECTIVE THINKING",
-        "type": "mcq",
-        "prompt": "Choose the clearest instruction:",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. Do it soon if possible",
-                "value": "A"
-            },
-            {
-                "label": "B. The file should be dealt with",
-                "value": "B"
-            },
-            {
-                "label": "C. Upload the signed file by 4 p.m. on Friday",
-                "value": "C"
-            },
-            {
-                "label": "D. You know what to send",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 7,
-        "section": 1,
-        "sectionTitle": "PART I — OBJECTIVE THINKING",
-        "type": "mcq",
-        "prompt": "A bag has 5 red, 4 blue and 3 green tokens. Without looking, the minimum number drawn to guarantee two of the same colour is:",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. 2",
-                "value": "A"
-            },
-            {
-                "label": "B. 3",
-                "value": "B"
-            },
-            {
-                "label": "C. 4",
-                "value": "C"
-            },
-            {
-                "label": "D. 5",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 8,
-        "section": 1,
-        "sectionTitle": "PART I — OBJECTIVE THINKING",
-        "type": "mcq",
-        "prompt": "A meeting starts at 10:35 and lasts 1 hour 48 minutes. It ends at:",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. 12:13",
-                "value": "A"
-            },
-            {
-                "label": "B. 12:23",
-                "value": "B"
-            },
-            {
-                "label": "C. 12:33",
-                "value": "C"
-            },
-            {
-                "label": "D. 1:23",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 9,
-        "section": 1,
-        "sectionTitle": "PART I — OBJECTIVE THINKING",
-        "type": "mcq",
-        "prompt": "Which item is least relevant when choosing the safest route during heavy rain?",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. Flooded sections",
-                "value": "A"
-            },
-            {
-                "label": "B. Lighting",
-                "value": "B"
-            },
-            {
-                "label": "C. Distance",
-                "value": "C"
-            },
-            {
-                "label": "D. Colour of the route on a poster",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 10,
-        "section": 1,
-        "sectionTitle": "PART I — OBJECTIVE THINKING",
-        "type": "mcq",
-        "prompt": "If “NEXUS” is coded by shifting each letter one step forward, the code is:",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. OFYVT",
-                "value": "A"
-            },
-            {
-                "label": "B. OFYUS",
-                "value": "B"
-            },
-            {
-                "label": "C. MDWTR",
-                "value": "C"
-            },
-            {
-                "label": "D. OFZVT",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 11,
-        "section": 1,
-        "sectionTitle": "PART I — OBJECTIVE THINKING",
-        "type": "mcq",
-        "prompt": "A tank is 3/5 full. After adding 120 L it is 4/5 full. Capacity is:",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. 300 L",
-                "value": "A"
-            },
-            {
-                "label": "B. 400 L",
-                "value": "B"
-            },
-            {
-                "label": "C. 500 L",
-                "value": "C"
-            },
-            {
-                "label": "D. 600 L",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 12,
-        "section": 1,
-        "sectionTitle": "PART I — OBJECTIVE THINKING",
-        "type": "mcq",
-        "prompt": "A student spends 2/7 of a study period on reading and 1/3 on practice. The fraction remaining is:",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. 8/21",
-                "value": "A"
-            },
-            {
-                "label": "B. 10/21",
-                "value": "B"
-            },
-            {
-                "label": "C. 11/21",
-                "value": "C"
-            },
-            {
-                "label": "D. 13/21",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 13,
-        "section": 1,
-        "sectionTitle": "PART I — OBJECTIVE THINKING",
-        "type": "mcq",
-        "prompt": "Four teams finish a task in 12, 15, 10 and 18 minutes. Which team is second fastest?",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. Team 1",
-                "value": "A"
-            },
-            {
-                "label": "B. Team 2",
-                "value": "B"
-            },
-            {
-                "label": "C. Team 3",
-                "value": "C"
-            },
-            {
-                "label": "D. Team 4",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 14,
-        "section": 1,
-        "sectionTitle": "PART I — OBJECTIVE THINKING",
-        "type": "mcq",
-        "prompt": "A statement is supported by evidence only when:",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. It sounds confident",
-                "value": "A"
-            },
-            {
-                "label": "B. It is repeated often",
-                "value": "B"
-            },
-            {
-                "label": "C. Relevant facts support it",
-                "value": "C"
-            },
-            {
-                "label": "D. Most people prefer it",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 15,
-        "section": 1,
-        "sectionTitle": "PART I — OBJECTIVE THINKING",
-        "type": "mcq",
-        "prompt": "A class has 36 learners. 5/12 choose robotics and 1/3 choose art. How many choose neither, if choices are exclusive?",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. 3",
-                "value": "A"
-            },
-            {
-                "label": "B. 6",
-                "value": "B"
-            },
-            {
-                "label": "C. 9",
-                "value": "C"
-            },
-            {
-                "label": "D. 12",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 16,
-        "section": 1,
-        "sectionTitle": "PART I — OBJECTIVE THINKING",
-        "type": "mcq",
-        "prompt": "A warning says “Disconnect power before opening”. Which action follows the instruction?",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. Open first, then unplug",
-                "value": "A"
-            },
-            {
-                "label": "B. Unplug before opening",
-                "value": "B"
-            },
-            {
-                "label": "C. Ask a friend to hold the switch",
-                "value": "C"
-            },
-            {
-                "label": "D. Open if the light is off",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 17,
-        "section": 1,
-        "sectionTitle": "PART I — OBJECTIVE THINKING",
-        "type": "mcq",
-        "prompt": "Find the odd one out by relationship:",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. Thermometer : temperature",
-                "value": "A"
-            },
-            {
-                "label": "B. Compass : direction",
-                "value": "B"
-            },
-            {
-                "label": "C. Clock : mass",
-                "value": "C"
-            },
-            {
-                "label": "D. Ruler : length",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 18,
-        "section": 1,
-        "sectionTitle": "PART I — OBJECTIVE THINKING",
-        "type": "mcq",
-        "prompt": "A sequence alternates ×2 and +3: 2, 4, 7, 14, 17, __.",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. 20",
-                "value": "A"
-            },
-            {
-                "label": "B. 28",
-                "value": "B"
-            },
-            {
-                "label": "C. 34",
-                "value": "C"
-            },
-            {
-                "label": "D. 35",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 19,
-        "section": 1,
-        "sectionTitle": "PART I — OBJECTIVE THINKING",
-        "type": "mcq",
-        "prompt": "Which is the strongest basis for concluding that a new process is faster?",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. One successful attempt",
-                "value": "A"
-            },
-            {
-                "label": "B. Anecdotal opinion",
-                "value": "B"
-            },
-            {
-                "label": "C. Repeated timed trials under comparable conditions",
-                "value": "C"
-            },
-            {
-                "label": "D. A colourful diagram",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 20,
-        "section": 1,
-        "sectionTitle": "PART I — OBJECTIVE THINKING",
-        "type": "mcq",
-        "prompt": "A budget of ₹1,200 is reduced by 15%. The revised amount is:",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. ₹980",
-                "value": "A"
-            },
-            {
-                "label": "B. ₹1,020",
-                "value": "B"
-            },
-            {
-                "label": "C. ₹1,040",
-                "value": "C"
-            },
-            {
-                "label": "D. ₹1,080",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 21,
-        "section": 1,
-        "sectionTitle": "PART I — OBJECTIVE THINKING",
-        "type": "mcq",
-        "prompt": "A map scale is 1 cm : 250 m. A path measures 6.4 cm. Actual distance is:",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. 1.2 km",
-                "value": "A"
-            },
-            {
-                "label": "B. 1.4 km",
-                "value": "B"
-            },
-            {
-                "label": "C. 1.6 km",
-                "value": "C"
-            },
-            {
-                "label": "D. 2.5 km",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 22,
-        "section": 1,
-        "sectionTitle": "PART I — OBJECTIVE THINKING",
-        "type": "mcq",
-        "prompt": "If every submitted report has a date and some dated reports are unsigned, which must be true?",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. All dated reports are submitted",
-                "value": "A"
-            },
-            {
-                "label": "B. Some submitted reports are unsigned",
-                "value": "B"
-            },
-            {
-                "label": "C. Every submitted report is dated",
-                "value": "C"
-            },
-            {
-                "label": "D. No unsigned report is submitted",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 23,
-        "section": 1,
-        "sectionTitle": "PART I — OBJECTIVE THINKING",
-        "type": "mcq",
-        "prompt": "A message says “Bring either a ruler or a set square.” A learner brings both. The instruction is:",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. Violated",
-                "value": "A"
-            },
-            {
-                "label": "B. Followed; at least one is present",
-                "value": "B"
-            },
-            {
-                "label": "C. Impossible to interpret",
-                "value": "C"
-            },
-            {
-                "label": "D. Followed only if both are new",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 24,
-        "section": 1,
-        "sectionTitle": "PART I — OBJECTIVE THINKING",
-        "type": "mcq",
-        "prompt": "A class survey total is 80. 35% select option A. Number selecting A is:",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. 18",
-                "value": "A"
-            },
-            {
-                "label": "B. 24",
-                "value": "B"
-            },
-            {
-                "label": "C. 28",
-                "value": "C"
-            },
-            {
-                "label": "D. 32",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 25,
-        "section": 1,
-        "sectionTitle": "PART I — OBJECTIVE THINKING",
-        "type": "mcq",
-        "prompt": "Which revision removes ambiguity from “Meet me next Friday” when sent on a date-sensitive notice?",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. Meet me soon",
-                "value": "A"
-            },
-            {
-                "label": "B. Meet me Friday",
-                "value": "B"
-            },
-            {
-                "label": "C. Meet me on 30 October 2026 at 2 p.m.",
-                "value": "C"
-            },
-            {
-                "label": "D. Meet me next week sometime",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 26,
-        "section": 1,
-        "sectionTitle": "PART I — OBJECTIVE THINKING",
-        "type": "mcq",
-        "prompt": "A project needs 4 workers for 6 hours at a constant rate. Equivalent work is:",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. 10 worker-hours",
-                "value": "A"
-            },
-            {
-                "label": "B. 18 worker-hours",
-                "value": "B"
-            },
-            {
-                "label": "C. 24 worker-hours",
-                "value": "C"
-            },
-            {
-                "label": "D. 30 worker-hours",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 27,
-        "section": 1,
-        "sectionTitle": "PART I — OBJECTIVE THINKING",
-        "type": "mcq",
-        "prompt": "A box contains 2 defective and 8 working bulbs. Probability of selecting a working bulb at random is:",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. 1/5",
-                "value": "A"
-            },
-            {
-                "label": "B. 2/5",
-                "value": "B"
-            },
-            {
-                "label": "C. 4/5",
-                "value": "C"
-            },
-            {
-                "label": "D. 9/10",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 28,
-        "section": 1,
-        "sectionTitle": "PART I — OBJECTIVE THINKING",
-        "type": "mcq",
-        "prompt": "A claim changes after new evidence appears. This most directly demonstrates:",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. Stubbornness",
-                "value": "A"
-            },
-            {
-                "label": "B. Adaptability",
-                "value": "B"
-            },
-            {
-                "label": "C. Guesswork",
-                "value": "C"
-            },
-            {
-                "label": "D. Bias",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 29,
-        "section": 1,
-        "sectionTitle": "PART I — OBJECTIVE THINKING",
-        "type": "mcq",
-        "prompt": "A record shows planned 50 min, actual 42 min. Time saved is:",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. 6 min",
-                "value": "A"
-            },
-            {
-                "label": "B. 8 min",
-                "value": "B"
-            },
-            {
-                "label": "C. 10 min",
-                "value": "C"
-            },
-            {
-                "label": "D. 12 min",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 30,
-        "section": 1,
-        "sectionTitle": "PART I — OBJECTIVE THINKING",
-        "type": "mcq",
-        "prompt": "When two routes are equally short but one is closed, the best decision is to:",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. Use the closed route",
-                "value": "A"
-            },
-            {
-                "label": "B. Ignore the notice",
-                "value": "B"
-            },
-            {
-                "label": "C. Choose the available safe alternative",
-                "value": "C"
-            },
-            {
-                "label": "D. Wait without checking",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 31,
-        "section": 2,
-        "sectionTitle": "PART II — ADVANCED QUANTITATIVE & LOGICAL REASONING",
-        "type": "mcq",
-        "prompt": "A FOUR-DIGIT CODE USES DISTINCT DIGITS. THE FIRST DIGIT IS TWICE THE LAST DIGIT, THE SECOND IS 3 MORE THAN THE LAST, AND THE SUM OF ALL DIGITS IS 18. WHICH CODE SATISFIES THESE CONDITIONS?",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. 6390",
-                "value": "A"
-            },
-            {
-                "label": "B. 6381",
-                "value": "B"
-            },
-            {
-                "label": "C. 5274",
-                "value": "C"
-            },
-            {
-                "label": "D. 4266",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 32,
-        "section": 2,
-        "sectionTitle": "PART II — ADVANCED QUANTITATIVE & LOGICAL REASONING",
-        "type": "mcq",
-        "prompt": "A MACHINE COMPLETES 3/8 OF A BATCH IN 12 MINUTES AT A CONSTANT RATE. HOW LONG WILL THE ENTIRE BATCH TAKE?",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. 24 MINUTES",
-                "value": "A"
-            },
-            {
-                "label": "B. 30 MINUTES",
-                "value": "B"
-            },
-            {
-                "label": "C. 32 MINUTES",
-                "value": "C"
-            },
-            {
-                "label": "D. 36 MINUTES",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 33,
-        "section": 2,
-        "sectionTitle": "PART II — ADVANCED QUANTITATIVE & LOGICAL REASONING",
-        "type": "mcq",
-        "prompt": "THE AVERAGE OF FIVE NUMBERS IS 24. IF ONE NUMBER, 18, IS REPLACED BY 33, WHAT IS THE NEW AVERAGE?",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. 25",
-                "value": "A"
-            },
-            {
-                "label": "B. 26",
-                "value": "B"
-            },
-            {
-                "label": "C. 27",
-                "value": "C"
-            },
-            {
-                "label": "D. 28",
-                "value": "D"
-            }
-        ],
-        "answerKey": "C"
-    },
-    {
-        "id": 34,
-        "section": 2,
-        "sectionTitle": "PART II — ADVANCED QUANTITATIVE & LOGICAL REASONING",
-        "type": "mcq",
-        "prompt": "A PRICE IS INCREASED BY 20% AND THEN REDUCED BY 20%. THE FINAL PRICE IS WHAT PERCENTAGE OF THE ORIGINAL?",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. 96%",
-                "value": "A"
-            },
-            {
-                "label": "B. 98%",
-                "value": "B"
-            },
-            {
-                "label": "C. 100%",
-                "value": "C"
-            },
-            {
-                "label": "D. 104%",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 35,
-        "section": 2,
-        "sectionTitle": "PART II — ADVANCED QUANTITATIVE & LOGICAL REASONING",
-        "type": "mcq",
-        "prompt": "IN A CLASS, THE RATIO OF STUDENTS CHOOSING SCIENCE TO ART IS 7:5. IF 18 MORE STUDENTS CHOOSE SCIENCE THAN ART, HOW MANY STUDENTS ARE THERE IN TOTAL?",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. 72",
-                "value": "A"
-            },
-            {
-                "label": "B. 90",
-                "value": "B"
-            },
-            {
-                "label": "C. 108",
-                "value": "C"
-            },
-            {
-                "label": "D. 120",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 36,
-        "section": 2,
-        "sectionTitle": "PART II — ADVANCED QUANTITATIVE & LOGICAL REASONING",
-        "type": "mcq",
-        "prompt": "A CLOCK GAINS 4 MINUTES EVERY HOUR. IT IS SET CORRECTLY AT 8:00 A.M. WHAT WILL IT DISPLAY WHEN THE ACTUAL TIME IS 2:00 P.M.?",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. 2:20 P.M.",
-                "value": "A"
-            },
-            {
-                "label": "B. 2:24 P.M.",
-                "value": "B"
-            },
-            {
-                "label": "C. 2:30 P.M.",
-                "value": "C"
-            },
-            {
-                "label": "D. 2:40 P.M.",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 37,
-        "section": 2,
-        "sectionTitle": "PART II — ADVANCED QUANTITATIVE & LOGICAL REASONING",
-        "type": "mcq",
-        "prompt": "A NUMBER LEAVES REMAINDER 3 WHEN DIVIDED BY 5 AND REMAINDER 2 WHEN DIVIDED BY 3. WHICH IS THE SMALLEST POSITIVE SUCH NUMBER?",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. 8",
-                "value": "A"
-            },
-            {
-                "label": "B. 13",
-                "value": "B"
-            },
-            {
-                "label": "C. 18",
-                "value": "C"
-            },
-            {
-                "label": "D. 23",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 38,
-        "section": 2,
-        "sectionTitle": "PART II — ADVANCED QUANTITATIVE & LOGICAL REASONING",
-        "type": "mcq",
-        "prompt": "A RECTANGULAR FIELD HAS PERIMETER 74 M AND LENGTH 23 M. WHAT IS ITS AREA?",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. 276 M²",
-                "value": "A"
-            },
-            {
-                "label": "B. 299 M²",
-                "value": "B"
-            },
-            {
-                "label": "C. 322 M²",
-                "value": "C"
-            },
-            {
-                "label": "D. 345 M²",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 39,
-        "section": 2,
-        "sectionTitle": "PART II — ADVANCED QUANTITATIVE & LOGICAL REASONING",
-        "type": "mcq",
-        "prompt": "A BUS TRAVELS 60 KM AT 40 KM/H AND RETURNS THE SAME DISTANCE AT 60 KM/H. WHAT IS ITS AVERAGE SPEED FOR THE WHOLE JOURNEY?",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. 45 KM/H",
-                "value": "A"
-            },
-            {
-                "label": "B. 48 KM/H",
-                "value": "B"
-            },
-            {
-                "label": "C. 50 KM/H",
-                "value": "C"
-            },
-            {
-                "label": "D. 52 KM/H",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 40,
-        "section": 2,
-        "sectionTitle": "PART II — ADVANCED QUANTITATIVE & LOGICAL REASONING",
-        "type": "mcq",
-        "prompt": "IF 2X − 3 = 5X + 12, WHAT IS X?",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. −5",
-                "value": "A"
-            },
-            {
-                "label": "B. −3",
-                "value": "B"
-            },
-            {
-                "label": "C. 3",
-                "value": "C"
-            },
-            {
-                "label": "D. 5",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 41,
-        "section": 2,
-        "sectionTitle": "PART II — ADVANCED QUANTITATIVE & LOGICAL REASONING",
-        "type": "mcq",
-        "prompt": "A SEQUENCE IS FORMED BY ADDING CONSECUTIVE ODD NUMBERS: 2, 3, 6, 11, 18, __. WHAT IS THE NEXT TERM?",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. 25",
-                "value": "A"
-            },
-            {
-                "label": "B. 27",
-                "value": "B"
-            },
-            {
-                "label": "C. 29",
-                "value": "C"
-            },
-            {
-                "label": "D. 31",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 42,
-        "section": 2,
-        "sectionTitle": "PART II — ADVANCED QUANTITATIVE & LOGICAL REASONING",
-        "type": "mcq",
-        "prompt": "A BOX CONTAINS 4 WHITE, 5 BLACK AND 6 YELLOW COUNTERS. WHAT IS THE PROBABILITY OF NOT SELECTING A BLACK COUNTER?",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. 1/3",
-                "value": "A"
-            },
-            {
-                "label": "B. 2/3",
-                "value": "B"
-            },
-            {
-                "label": "C. 5/15",
-                "value": "C"
-            },
-            {
-                "label": "D. 6/15",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 43,
-        "section": 2,
-        "sectionTitle": "PART II — ADVANCED QUANTITATIVE & LOGICAL REASONING",
-        "type": "mcq",
-        "prompt": "A SUM BECOMES ₹1,260 AFTER A 5% INCREASE. WHAT WAS THE ORIGINAL SUM?",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. ₹1,180",
-                "value": "A"
-            },
-            {
-                "label": "B. ₹1,190",
-                "value": "B"
-            },
-            {
-                "label": "C. ₹1,200",
-                "value": "C"
-            },
-            {
-                "label": "D. ₹1,210",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 44,
-        "section": 2,
-        "sectionTitle": "PART II — ADVANCED QUANTITATIVE & LOGICAL REASONING",
-        "type": "mcq",
-        "prompt": "THREE TAPS FILL A TANK IN 6, 8 AND 12 HOURS RESPECTIVELY. WHAT FRACTION OF THE TANK DO THEY FILL TOGETHER IN ONE HOUR?",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. 1/3",
-                "value": "A"
-            },
-            {
-                "label": "B. 3/8",
-                "value": "B"
-            },
-            {
-                "label": "C. 1/2",
-                "value": "C"
-            },
-            {
-                "label": "D. 5/12",
-                "value": "D"
-            }
-        ],
-        "answerKey": "B"
-    },
-    {
-        "id": 45,
-        "section": 2,
-        "sectionTitle": "PART II — ADVANCED QUANTITATIVE & LOGICAL REASONING",
-        "type": "mcq",
-        "prompt": "A MAP USES A SCALE OF 1:50,000. TWO TOWNS ARE 7.6 CM APART ON THE MAP. WHAT IS THE ACTUAL DISTANCE?",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. 2.8 KM",
-                "value": "A"
-            },
-            {
-                "label": "B. 3.2 KM",
-                "value": "B"
-            },
-            {
-                "label": "C. 3.8 KM",
-                "value": "C"
-            },
-            {
-                "label": "D. 4.2 KM",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 46,
-        "section": 2,
-        "sectionTitle": "PART II — ADVANCED QUANTITATIVE & LOGICAL REASONING",
-        "type": "mcq",
-        "prompt": "A STUDENT ANSWERS 80% OF 45 QUESTIONS CORRECTLY. HOW MANY ARE INCORRECT?",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. 7",
-                "value": "A"
-            },
-            {
-                "label": "B. 8",
-                "value": "B"
-            },
-            {
-                "label": "C. 9",
-                "value": "C"
-            },
-            {
-                "label": "D. 10",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 47,
-        "section": 2,
-        "sectionTitle": "PART II — ADVANCED QUANTITATIVE & LOGICAL REASONING",
-        "type": "mcq",
-        "prompt": "THE MEDIAN OF 4, 9, 11, 15, 18, 22 AND 30 IS:",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. 11",
-                "value": "A"
-            },
-            {
-                "label": "B. 15",
-                "value": "B"
-            },
-            {
-                "label": "C. 18",
-                "value": "C"
-            },
-            {
-                "label": "D. 22",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 48,
-        "section": 2,
-        "sectionTitle": "PART II — ADVANCED QUANTITATIVE & LOGICAL REASONING",
-        "type": "mcq",
-        "prompt": "IF A IS 25% MORE THAN B, THEN B IS WHAT PERCENTAGE LESS THAN A?",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. 15%",
-                "value": "A"
-            },
-            {
-                "label": "B. 20%",
-                "value": "B"
-            },
-            {
-                "label": "C. 25%",
-                "value": "C"
-            },
-            {
-                "label": "D. 30%",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 49,
-        "section": 2,
-        "sectionTitle": "PART II — ADVANCED QUANTITATIVE & LOGICAL REASONING",
-        "type": "mcq",
-        "prompt": "A TRAIN 180 M LONG CROSSES A POLE IN 9 SECONDS. ITS SPEED IS:",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. 60 KM/H",
-                "value": "A"
-            },
-            {
-                "label": "B. 66 KM/H",
-                "value": "B"
-            },
-            {
-                "label": "C. 72 KM/H",
-                "value": "C"
-            },
-            {
-                "label": "D. 80 KM/H",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 50,
-        "section": 2,
-        "sectionTitle": "PART II — ADVANCED QUANTITATIVE & LOGICAL REASONING",
-        "type": "mcq",
-        "prompt": "THE SUM OF THE INTERIOR ANGLES OF A POLYGON IS 1,260°. HOW MANY SIDES DOES IT HAVE?",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. 7",
-                "value": "A"
-            },
-            {
-                "label": "B. 8",
-                "value": "B"
-            },
-            {
-                "label": "C. 9",
-                "value": "C"
-            },
-            {
-                "label": "D. 10",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 51,
-        "section": 2,
-        "sectionTitle": "PART II — ADVANCED QUANTITATIVE & LOGICAL REASONING",
-        "type": "mcq",
-        "prompt": "A NUMBER IS MULTIPLIED BY 7, THEN 9 IS SUBTRACTED. THE RESULT IS 40. WHAT IS THE NUMBER?",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. 5",
-                "value": "A"
-            },
-            {
-                "label": "B. 6",
-                "value": "B"
-            },
-            {
-                "label": "C. 7",
-                "value": "C"
-            },
-            {
-                "label": "D. 8",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 52,
-        "section": 2,
-        "sectionTitle": "PART II — ADVANCED QUANTITATIVE & LOGICAL REASONING",
-        "type": "mcq",
-        "prompt": "A SHOP OFFERS 3 ITEMS FOR THE PRICE OF 2. THE DISCOUNT ON THE TOTAL MARKED PRICE IS:",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. 25%",
-                "value": "A"
-            },
-            {
-                "label": "B. 30%",
-                "value": "B"
-            },
-            {
-                "label": "C. 33⅓%",
-                "value": "C"
-            },
-            {
-                "label": "D. 50%",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 53,
-        "section": 2,
-        "sectionTitle": "PART II — ADVANCED QUANTITATIVE & LOGICAL REASONING",
-        "type": "mcq",
-        "prompt": "A COMMITTEE OF 2 IS SELECTED FROM 5 STUDENTS. HOW MANY DIFFERENT PAIRS ARE POSSIBLE?",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. 5",
-                "value": "A"
-            },
-            {
-                "label": "B. 8",
-                "value": "B"
-            },
-            {
-                "label": "C. 10",
-                "value": "C"
-            },
-            {
-                "label": "D. 12",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 54,
-        "section": 2,
-        "sectionTitle": "PART II — ADVANCED QUANTITATIVE & LOGICAL REASONING",
-        "type": "mcq",
-        "prompt": "IF THE RADIUS OF A CIRCLE IS DOUBLED, ITS AREA BECOMES:",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. 2 TIMES",
-                "value": "A"
-            },
-            {
-                "label": "B. 3 TIMES",
-                "value": "B"
-            },
-            {
-                "label": "C. 4 TIMES",
-                "value": "C"
-            },
-            {
-                "label": "D. 8 TIMES",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 55,
-        "section": 2,
-        "sectionTitle": "PART II — ADVANCED QUANTITATIVE & LOGICAL REASONING",
-        "type": "mcq",
-        "prompt": "A SOLUTION CONTAINS 18 ML OF CONCENTRATE IN 150 ML OF MIXTURE. WHAT PERCENTAGE IS CONCENTRATE?",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. 10%",
-                "value": "A"
-            },
-            {
-                "label": "B. 12%",
-                "value": "B"
-            },
-            {
-                "label": "C. 15%",
-                "value": "C"
-            },
-            {
-                "label": "D. 18%",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 56,
-        "section": 3,
-        "sectionTitle": "PART III — DATA, SCIENTIFIC REASONING & APPLICATION",
-        "type": "mcq",
-        "prompt": "A WORKER COMPLETES 40% OF A TASK IN 6 DAYS. AT THE SAME RATE, HOW MANY DAYS ARE NEEDED FOR THE WHOLE TASK?",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. 12",
-                "value": "A"
-            },
-            {
-                "label": "B. 14",
-                "value": "B"
-            },
-            {
-                "label": "C. 15",
-                "value": "C"
-            },
-            {
-                "label": "D. 18",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 57,
-        "section": 3,
-        "sectionTitle": "PART III — DATA, SCIENTIFIC REASONING & APPLICATION",
-        "type": "mcq",
-        "prompt": "WHICH STATEMENT IS LOGICALLY EQUIVALENT TO ‘IF THE ALARM IS SET, THE INDICATOR GLOWS’?",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. IF THE INDICATOR DOES NOT GLOW, THE ALARM IS NOT SET",
-                "value": "A"
-            },
-            {
-                "label": "B. IF THE INDICATOR GLOWS, THE ALARM IS SET",
-                "value": "B"
-            },
-            {
-                "label": "C. IF THE ALARM IS NOT SET, THE INDICATOR DOES NOT GLOW",
-                "value": "C"
-            },
-            {
-                "label": "D. THE ALARM IS SET ONLY WHEN THE INDICATOR IS OFF",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 58,
-        "section": 3,
-        "sectionTitle": "PART III — DATA, SCIENTIFIC REASONING & APPLICATION",
-        "type": "mcq",
-        "prompt": "ALL M ARE N. NO N IS P. WHICH CONCLUSION MUST FOLLOW?",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. SOME M ARE P",
-                "value": "A"
-            },
-            {
-                "label": "B. NO M IS P",
-                "value": "B"
-            },
-            {
-                "label": "C. ALL P ARE M",
-                "value": "C"
-            },
-            {
-                "label": "D. SOME P ARE N",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 59,
-        "section": 3,
-        "sectionTitle": "PART III — DATA, SCIENTIFIC REASONING & APPLICATION",
-        "type": "mcq",
-        "prompt": "A STATEMENT IS TRUE ONLY WHEN BOTH CONDITIONS X AND Y HOLD. X IS TRUE AND Y IS FALSE. THE STATEMENT IS:",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. TRUE",
-                "value": "A"
-            },
-            {
-                "label": "B. FALSE",
-                "value": "B"
-            },
-            {
-                "label": "C. BOTH TRUE AND FALSE",
-                "value": "C"
-            },
-            {
-                "label": "D. CANNOT BE DETERMINED",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 60,
-        "section": 3,
-        "sectionTitle": "PART III — DATA, SCIENTIFIC REASONING & APPLICATION",
-        "type": "mcq",
-        "prompt": "IN A CODE, EACH LETTER IS REPLACED BY THE LETTER TWO PLACES AFTER IT. HOW IS ‘MIND’ CODED?",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. OKPF",
-                "value": "A"
-            },
-            {
-                "label": "B. OKNF",
-                "value": "B"
-            },
-            {
-                "label": "C. OKPE",
-                "value": "C"
-            },
-            {
-                "label": "D. OJPF",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 61,
-        "section": 3,
-        "sectionTitle": "PART III — DATA, SCIENTIFIC REASONING & APPLICATION",
-        "type": "mcq",
-        "prompt": "FIVE PEOPLE SIT IN A ROW. R IS LEFT OF S, T IS RIGHT OF S, AND U IS LEFT OF R. WHICH ORDER IS POSSIBLE?",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. U R S T",
-                "value": "A"
-            },
-            {
-                "label": "B. R U S T",
-                "value": "B"
-            },
-            {
-                "label": "C. S R U T",
-                "value": "C"
-            },
-            {
-                "label": "D. T S R U",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 62,
-        "section": 3,
-        "sectionTitle": "PART III — DATA, SCIENTIFIC REASONING & APPLICATION",
-        "type": "mcq",
-        "prompt": "A DATA SET HAS VALUES 6, 8, 8, 10, 13. IF 13 IS REPLACED BY 18, WHICH MEASURE CHANGES?",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. MODE ONLY",
-                "value": "A"
-            },
-            {
-                "label": "B. MEDIAN ONLY",
-                "value": "B"
-            },
-            {
-                "label": "C. MEAN ONLY",
-                "value": "C"
-            },
-            {
-                "label": "D. BOTH MEAN AND RANGE",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 63,
-        "section": 3,
-        "sectionTitle": "PART III — DATA, SCIENTIFIC REASONING & APPLICATION",
-        "type": "mcq",
-        "prompt": "A SURVEY RECEIVES 240 RESPONSES; 15% ARE INVALID. HOW MANY VALID RESPONSES REMAIN?",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. 196",
-                "value": "A"
-            },
-            {
-                "label": "B. 200",
-                "value": "B"
-            },
-            {
-                "label": "C. 204",
-                "value": "C"
-            },
-            {
-                "label": "D. 216",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 64,
-        "section": 3,
-        "sectionTitle": "PART III — DATA, SCIENTIFIC REASONING & APPLICATION",
-        "type": "mcq",
-        "prompt": "A CONTAINER HAS 3 LITRES OF A 20% SALT SOLUTION. HOW MUCH SALT IS PRESENT?",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. 300 ML",
-                "value": "A"
-            },
-            {
-                "label": "B. 500 ML",
-                "value": "B"
-            },
-            {
-                "label": "C. 600 ML",
-                "value": "C"
-            },
-            {
-                "label": "D. 750 ML",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 65,
-        "section": 3,
-        "sectionTitle": "PART III — DATA, SCIENTIFIC REASONING & APPLICATION",
-        "type": "mcq",
-        "prompt": "A SQUARE AND A RECTANGLE HAVE EQUAL PERIMETERS. THE SQUARE HAS SIDE 10 CM; THE RECTANGLE HAS LENGTH 12 CM. ITS WIDTH IS:",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. 6 CM",
-                "value": "A"
-            },
-            {
-                "label": "B. 8 CM",
-                "value": "B"
-            },
-            {
-                "label": "C. 10 CM",
-                "value": "C"
-            },
-            {
-                "label": "D. 12 CM",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 66,
-        "section": 3,
-        "sectionTitle": "PART III — DATA, SCIENTIFIC REASONING & APPLICATION",
-        "type": "mcq",
-        "prompt": "A RUNNER COMPLETES 400 M IN 80 SECONDS. AT THE SAME SPEED, HOW FAR DOES THE RUNNER TRAVEL IN 3 MINUTES?",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. 800 M",
-                "value": "A"
-            },
-            {
-                "label": "B. 850 M",
-                "value": "B"
-            },
-            {
-                "label": "C. 900 M",
-                "value": "C"
-            },
-            {
-                "label": "D. 960 M",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 67,
-        "section": 3,
-        "sectionTitle": "PART III — DATA, SCIENTIFIC REASONING & APPLICATION",
-        "type": "mcq",
-        "prompt": "THE PROBABILITY OF AN EVENT IS 0.35. WHAT IS THE PROBABILITY THAT IT DOES NOT OCCUR?",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. 0.35",
-                "value": "A"
-            },
-            {
-                "label": "B. 0.55",
-                "value": "B"
-            },
-            {
-                "label": "C. 0.65",
-                "value": "C"
-            },
-            {
-                "label": "D. 0.75",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 68,
-        "section": 3,
-        "sectionTitle": "PART III — DATA, SCIENTIFIC REASONING & APPLICATION",
-        "type": "mcq",
-        "prompt": "A 2-DIGIT NUMBER HAS DIGITS WHOSE SUM IS 11. REVERSING THE DIGITS INCREASES THE NUMBER BY 27. WHAT IS THE ORIGINAL NUMBER?",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. 47",
-                "value": "A"
-            },
-            {
-                "label": "B. 56",
-                "value": "B"
-            },
-            {
-                "label": "C. 65",
-                "value": "C"
-            },
-            {
-                "label": "D. 74",
-                "value": "D"
-            }
-        ],
-        "answerKey": "A"
-    },
-    {
-        "id": 69,
-        "section": 3,
-        "sectionTitle": "PART III — DATA, SCIENTIFIC REASONING & APPLICATION",
-        "type": "mcq",
-        "prompt": "A SUM OF ₹8,000 EARNS SIMPLE INTEREST AT 7.5% PER ANNUM FOR 2 YEARS. THE INTEREST IS:",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. ₹1,000",
-                "value": "A"
-            },
-            {
-                "label": "B. ₹1,100",
-                "value": "B"
-            },
-            {
-                "label": "C. ₹1,200",
-                "value": "C"
-            },
-            {
-                "label": "D. ₹1,500",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 70,
-        "section": 3,
-        "sectionTitle": "PART III — DATA, SCIENTIFIC REASONING & APPLICATION",
-        "type": "mcq",
-        "prompt": "A RECTANGLE’S LENGTH IS INCREASED BY 10% AND WIDTH DECREASED BY 10%. THE AREA CHANGES BY:",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. 1% DECREASE",
-                "value": "A"
-            },
-            {
-                "label": "B. NO CHANGE",
-                "value": "B"
-            },
-            {
-                "label": "C. 1% INCREASE",
-                "value": "C"
-            },
-            {
-                "label": "D. 2% DECREASE",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 71,
-        "section": 3,
-        "sectionTitle": "PART III — DATA, SCIENTIFIC REASONING & APPLICATION",
-        "type": "mcq",
-        "prompt": "A CODE CONTAINS 3 LETTERS FOLLOWED BY 2 DIGITS. IF REPETITION IS ALLOWED AND THERE ARE 26 LETTERS AND 10 DIGITS, HOW MANY CODES ARE POSSIBLE?",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. 26³ × 10²",
-                "value": "A"
-            },
-            {
-                "label": "B. 26² × 10³",
-                "value": "B"
-            },
-            {
-                "label": "C. 26 × 10 × 5",
-                "value": "C"
-            },
-            {
-                "label": "D. 26⁵ × 10²",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 72,
-        "section": 3,
-        "sectionTitle": "PART III — DATA, SCIENTIFIC REASONING & APPLICATION",
-        "type": "mcq",
-        "prompt": "A GROUP HAS 12 MEMBERS. EACH MEMBER SHAKES HANDS ONCE WITH EVERY OTHER MEMBER. HOW MANY HANDSHAKES OCCUR?",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. 56",
-                "value": "A"
-            },
-            {
-                "label": "B. 60",
-                "value": "B"
-            },
-            {
-                "label": "C. 66",
-                "value": "C"
-            },
-            {
-                "label": "D. 72",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 73,
-        "section": 3,
-        "sectionTitle": "PART III — DATA, SCIENTIFIC REASONING & APPLICATION",
-        "type": "mcq",
-        "prompt": "A NUMBER IS DIVISIBLE BY BOTH 6 AND 8. IT MUST BE DIVISIBLE BY:",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. 12",
-                "value": "A"
-            },
-            {
-                "label": "B. 18",
-                "value": "B"
-            },
-            {
-                "label": "C. 24",
-                "value": "C"
-            },
-            {
-                "label": "D. 36",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 74,
-        "section": 3,
-        "sectionTitle": "PART III — DATA, SCIENTIFIC REASONING & APPLICATION",
-        "type": "mcq",
-        "prompt": "THE HCF OF TWO NUMBERS IS 6 AND THEIR LCM IS 180. IF ONE NUMBER IS 30, THE OTHER IS:",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. 24",
-                "value": "A"
-            },
-            {
-                "label": "B. 30",
-                "value": "B"
-            },
-            {
-                "label": "C. 36",
-                "value": "C"
-            },
-            {
-                "label": "D. 42",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 75,
-        "section": 3,
-        "sectionTitle": "PART III — DATA, SCIENTIFIC REASONING & APPLICATION",
-        "type": "mcq",
-        "prompt": "A PERSON SPENDS 30% OF INCOME ON RENT AND 25% OF THE REMAINDER ON FOOD. WHAT PERCENTAGE OF THE ORIGINAL INCOME REMAINS?",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. 45.5%",
-                "value": "A"
-            },
-            {
-                "label": "B. 50%",
-                "value": "B"
-            },
-            {
-                "label": "C. 52.5%",
-                "value": "C"
-            },
-            {
-                "label": "D. 55%",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 76,
-        "section": 3,
-        "sectionTitle": "PART III — DATA, SCIENTIFIC REASONING & APPLICATION",
-        "type": "mcq",
-        "prompt": "A TANK IS 40% FULL. AFTER ADDING 30 LITRES, IT BECOMES 55% FULL. WHAT IS ITS CAPACITY?",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. 150 L",
-                "value": "A"
-            },
-            {
-                "label": "B. 180 L",
-                "value": "B"
-            },
-            {
-                "label": "C. 200 L",
-                "value": "C"
-            },
-            {
-                "label": "D. 240 L",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 77,
-        "section": 3,
-        "sectionTitle": "PART III — DATA, SCIENTIFIC REASONING & APPLICATION",
-        "type": "mcq",
-        "prompt": "A NUMBER IS CHOSEN AT RANDOM FROM 1 TO 30 INCLUSIVE. WHAT IS THE PROBABILITY IT IS A MULTIPLE OF 4 OR 5?",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. 1/3",
-                "value": "A"
-            },
-            {
-                "label": "B. 2/5",
-                "value": "B"
-            },
-            {
-                "label": "C. 7/15",
-                "value": "C"
-            },
-            {
-                "label": "D. 1/2",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 78,
-        "section": 3,
-        "sectionTitle": "PART III — DATA, SCIENTIFIC REASONING & APPLICATION",
-        "type": "mcq",
-        "prompt": "A CAR USES 8 LITRES OF FUEL FOR 100 KM. HOW MUCH FUEL IS NEEDED FOR 375 KM AT THE SAME RATE?",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. 28 L",
-                "value": "A"
-            },
-            {
-                "label": "B. 30 L",
-                "value": "B"
-            },
-            {
-                "label": "C. 32 L",
-                "value": "C"
-            },
-            {
-                "label": "D. 35 L",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 79,
-        "section": 3,
-        "sectionTitle": "PART III — DATA, SCIENTIFIC REASONING & APPLICATION",
-        "type": "mcq",
-        "prompt": "IF 3 PENCILS AND 2 PENS COST ₹34, WHILE 2 PENCILS AND 2 PENS COST ₹26, WHAT IS THE COST OF ONE PENCIL?",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. ₹4",
-                "value": "A"
-            },
-            {
-                "label": "B. ₹6",
-                "value": "B"
-            },
-            {
-                "label": "C. ₹8",
-                "value": "C"
-            },
-            {
-                "label": "D. ₹10",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 80,
-        "section": 3,
-        "sectionTitle": "PART III — DATA, SCIENTIFIC REASONING & APPLICATION",
-        "type": "mcq",
-        "prompt": "THE ANGLES OF A TRIANGLE ARE IN THE RATIO 2:3:4. THE LARGEST ANGLE IS:",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. 60°",
-                "value": "A"
-            },
-            {
-                "label": "B. 70°",
-                "value": "B"
-            },
-            {
-                "label": "C. 80°",
-                "value": "C"
-            },
-            {
-                "label": "D. 90°",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 81,
-        "section": 4,
-        "sectionTitle": "PART IV — INTEGRATED DECISION CHALLENGES",
-        "type": "mcq",
-        "prompt": "A CUBE HAS EDGE 5 CM. ITS TOTAL SURFACE AREA IS:",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. 100 CM²",
-                "value": "A"
-            },
-            {
-                "label": "B. 125 CM²",
-                "value": "B"
-            },
-            {
-                "label": "C. 150 CM²",
-                "value": "C"
-            },
-            {
-                "label": "D. 175 CM²",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 82,
-        "section": 4,
-        "sectionTitle": "PART IV — INTEGRATED DECISION CHALLENGES",
-        "type": "mcq",
-        "prompt": "A DATA CHART SHOWS 12, 15, 15, 18, 20. THE RANGE IS:",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. 5",
-                "value": "A"
-            },
-            {
-                "label": "B. 6",
-                "value": "B"
-            },
-            {
-                "label": "C. 8",
-                "value": "C"
-            },
-            {
-                "label": "D. 10",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 83,
-        "section": 4,
-        "sectionTitle": "PART IV — INTEGRATED DECISION CHALLENGES",
-        "type": "mcq",
-        "prompt": "A TASK CAN BE COMPLETED BY A IN 12 DAYS AND BY B IN 18 DAYS. WORKING TOGETHER, THEY COMPLETE IT IN:",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. 6 DAYS",
-                "value": "A"
-            },
-            {
-                "label": "B. 7.2 DAYS",
-                "value": "B"
-            },
-            {
-                "label": "C. 8 DAYS",
-                "value": "C"
-            },
-            {
-                "label": "D. 9 DAYS",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 84,
-        "section": 4,
-        "sectionTitle": "PART IV — INTEGRATED DECISION CHALLENGES",
-        "type": "mcq",
-        "prompt": "A BAG HAS 5 RED AND 7 BLUE BALLS. TWO BALLS ARE DRAWN WITHOUT REPLACEMENT. PROBABILITY BOTH ARE RED IS:",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. 5/33",
-                "value": "A"
-            },
-            {
-                "label": "B. 5/22",
-                "value": "B"
-            },
-            {
-                "label": "C. 1/6",
-                "value": "C"
-            },
-            {
-                "label": "D. 25/144",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 85,
-        "section": 4,
-        "sectionTitle": "PART IV — INTEGRATED DECISION CHALLENGES",
-        "type": "mcq",
-        "prompt": "THE SMALLEST NUMBER THAT MUST BE ADDED TO 1,000 TO MAKE IT DIVISIBLE BY 17 IS:",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. 3",
-                "value": "A"
-            },
-            {
-                "label": "B. 4",
-                "value": "B"
-            },
-            {
-                "label": "C. 5",
-                "value": "C"
-            },
-            {
-                "label": "D. 6",
-                "value": "D"
-            }
-        ],
-        "answerKey": "A"
-    },
-    {
-        "id": 86,
-        "section": 4,
-        "sectionTitle": "PART IV — INTEGRATED DECISION CHALLENGES",
-        "type": "mcq",
-        "prompt": "A SHOPKEEPER MARKS AN ITEM 40% ABOVE COST AND GIVES A 15% DISCOUNT. THE PROFIT PERCENTAGE IS:",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. 15%",
-                "value": "A"
-            },
-            {
-                "label": "B. 17%",
-                "value": "B"
-            },
-            {
-                "label": "C. 19%",
-                "value": "C"
-            },
-            {
-                "label": "D. 21%",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 87,
-        "section": 4,
-        "sectionTitle": "PART IV — INTEGRATED DECISION CHALLENGES",
-        "type": "mcq",
-        "prompt": "A MAP’S SCALE IS 1 CM TO 2.5 KM. A ROUTE OF 18 KM IS REPRESENTED BY:",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. 6.2 CM",
-                "value": "A"
-            },
-            {
-                "label": "B. 7.2 CM",
-                "value": "B"
-            },
-            {
-                "label": "C. 8.2 CM",
-                "value": "C"
-            },
-            {
-                "label": "D. 9.2 CM",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 88,
-        "section": 4,
-        "sectionTitle": "PART IV — INTEGRATED DECISION CHALLENGES",
-        "type": "mcq",
-        "prompt": "A CLASS HAS 32 STUDENTS. THE RATIO OF BOYS TO GIRLS IS 3:5. IF 4 BOYS JOIN, WHAT IS THE NEW RATIO?",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. 2:3",
-                "value": "A"
-            },
-            {
-                "label": "B. 4:5",
-                "value": "B"
-            },
-            {
-                "label": "C. 3:4",
-                "value": "C"
-            },
-            {
-                "label": "D. 5:7",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 89,
-        "section": 4,
-        "sectionTitle": "PART IV — INTEGRATED DECISION CHALLENGES",
-        "type": "mcq",
-        "prompt": "A SEQUENCE FOLLOWS N² + 1 FOR N = 1, 2, 3, ... . WHAT IS ITS 8TH TERM?",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. 49",
-                "value": "A"
-            },
-            {
-                "label": "B. 63",
-                "value": "B"
-            },
-            {
-                "label": "C. 64",
-                "value": "C"
-            },
-            {
-                "label": "D. 65",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 90,
-        "section": 4,
-        "sectionTitle": "PART IV — INTEGRATED DECISION CHALLENGES",
-        "type": "mcq",
-        "prompt": "A NUMBER IS INCREASED BY 30 AND THE RESULT IS 4 TIMES THE NUMBER. THE NUMBER IS:",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. 8",
-                "value": "A"
-            },
-            {
-                "label": "B. 10",
-                "value": "B"
-            },
-            {
-                "label": "C. 12",
-                "value": "C"
-            },
-            {
-                "label": "D. 15",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 91,
-        "section": 4,
-        "sectionTitle": "PART IV — INTEGRATED DECISION CHALLENGES",
-        "type": "mcq",
-        "prompt": "A RECTANGLE HAS AREA 192 CM² AND WIDTH 12 CM. ITS PERIMETER IS:",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. 48 CM",
-                "value": "A"
-            },
-            {
-                "label": "B. 52 CM",
-                "value": "B"
-            },
-            {
-                "label": "C. 56 CM",
-                "value": "C"
-            },
-            {
-                "label": "D. 60 CM",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 92,
-        "section": 4,
-        "sectionTitle": "PART IV — INTEGRATED DECISION CHALLENGES",
-        "type": "mcq",
-        "prompt": "A CYCLIST TRAVELS 15 KM IN 45 MINUTES. AT THE SAME SPEED, THE DISTANCE IN 2 HOURS IS:",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. 30 KM",
-                "value": "A"
-            },
-            {
-                "label": "B. 35 KM",
-                "value": "B"
-            },
-            {
-                "label": "C. 40 KM",
-                "value": "C"
-            },
-            {
-                "label": "D. 45 KM",
-                "value": "D"
-            }
-        ],
-        "answerKey": "C"
-    },
-    {
-        "id": 93,
-        "section": 4,
-        "sectionTitle": "PART IV — INTEGRATED DECISION CHALLENGES",
-        "type": "mcq",
-        "prompt": "WHICH IS THE STRONGEST REASON TO REPEAT AN EXPERIMENT SEVERAL TIMES?",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. TO MAKE THE REPORT LONGER",
-                "value": "A"
-            },
-            {
-                "label": "B. TO REDUCE THE EFFECT OF RANDOM VARIATION",
-                "value": "B"
-            },
-            {
-                "label": "C. TO GUARANTEE THE EXPECTED RESULT",
-                "value": "C"
-            },
-            {
-                "label": "D. TO AVOID RECORDING UNUSUAL RESULTS",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 94,
-        "section": 4,
-        "sectionTitle": "PART IV — INTEGRATED DECISION CHALLENGES",
-        "type": "mcq",
-        "prompt": "A THERMOMETER READS 2°C ABOVE THE ACTUAL TEMPERATURE AT EVERY MEASUREMENT. THIS IS BEST DESCRIBED AS:",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. RANDOM ERROR",
-                "value": "A"
-            },
-            {
-                "label": "B. SYSTEMATIC ERROR",
-                "value": "B"
-            },
-            {
-                "label": "C. SAMPLING ERROR",
-                "value": "C"
-            },
-            {
-                "label": "D. ROUNDING ERROR",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 95,
-        "section": 4,
-        "sectionTitle": "PART IV — INTEGRATED DECISION CHALLENGES",
-        "type": "mcq",
-        "prompt": "A SCHOOL COMPARES TWO STUDY METHODS, BUT ONE GROUP STUDIES FOR TWICE AS LONG. WHICH ISSUE MOST WEAKENS THE COMPARISON?",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. DIFFERENT GROUP NAMES",
-                "value": "A"
-            },
-            {
-                "label": "B. A CONFOUNDING VARIABLE",
-                "value": "B"
-            },
-            {
-                "label": "C. TOO MANY RESULTS",
-                "value": "C"
-            },
-            {
-                "label": "D. USING THE SAME TEST",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 96,
-        "section": 4,
-        "sectionTitle": "PART IV — INTEGRATED DECISION CHALLENGES",
-        "type": "mcq",
-        "prompt": "A REPORT GIVES A PERCENTAGE BUT OMITS THE TOTAL NUMBER SURVEYED. WHICH IMPORTANT INFORMATION IS MISSING?",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. SAMPLE SIZE",
-                "value": "A"
-            },
-            {
-                "label": "B. AUTHOR'S FAVOURITE COLOUR",
-                "value": "B"
-            },
-            {
-                "label": "C. PAGE NUMBER",
-                "value": "C"
-            },
-            {
-                "label": "D. FONT SIZE",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 97,
-        "section": 4,
-        "sectionTitle": "PART IV — INTEGRATED DECISION CHALLENGES",
-        "type": "mcq",
-        "prompt": "A SOURCE IS DATED 2021 AND A SECOND SOURCE IS DATED 2026. FOR A CURRENT SCHOOL TIMETABLE, WHICH SHOULD GENERALLY BE CHECKED FIRST?",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. THE 2021 SOURCE",
-                "value": "A"
-            },
-            {
-                "label": "B. THE 2026 SOURCE",
-                "value": "B"
-            },
-            {
-                "label": "C. THE LONGER SOURCE",
-                "value": "C"
-            },
-            {
-                "label": "D. THE SOURCE WITH MORE COLOURS",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 98,
-        "section": 4,
-        "sectionTitle": "PART IV — INTEGRATED DECISION CHALLENGES",
-        "type": "mcq",
-        "prompt": "A STUDENT COPIES A STATISTIC WITHOUT CHECKING ITS ORIGINAL SOURCE. THE MAIN RISK IS:",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. BETTER ACCURACY",
-                "value": "A"
-            },
-            {
-                "label": "B. LOSS OF TRACEABILITY AND POSSIBLE MISINFORMATION",
-                "value": "B"
-            },
-            {
-                "label": "C. AUTOMATIC VERIFICATION",
-                "value": "C"
-            },
-            {
-                "label": "D. REDUCED SAMPLE SIZE",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 99,
-        "section": 4,
-        "sectionTitle": "PART IV — INTEGRATED DECISION CHALLENGES",
-        "type": "mcq",
-        "prompt": "A PLAN HAS A 20% CHANCE OF DELAY ON EACH OF TWO INDEPENDENT STAGES. WHAT IS THE PROBABILITY THAT NEITHER STAGE IS DELAYED?",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. 60%",
-                "value": "A"
-            },
-            {
-                "label": "B. 64%",
-                "value": "B"
-            },
-            {
-                "label": "C. 80%",
-                "value": "C"
-            },
-            {
-                "label": "D. 96%",
-                "value": "D"
-            }
-        ]
-    },
-    {
-        "id": 100,
-        "section": 4,
-        "sectionTitle": "PART IV — INTEGRATED DECISION CHALLENGES",
-        "type": "mcq",
-        "prompt": "A SCHOOL HAS 3 EXITS. ONE IS CLOSED AND ONE IS OVERCROWDED. WHICH DECISION RULE IS MOST APPROPRIATE?",
-        "marks": 1,
-        "options": [
-            {
-                "label": "A. CHOOSE THE SHORTEST REGARDLESS OF RISK",
-                "value": "A"
-            },
-            {
-                "label": "B. USE THE OPEN, SAFEST ROUTE AFTER STAFF CONFIRMATION",
-                "value": "B"
-            },
-            {
-                "label": "C. FOLLOW THE LARGEST CROWD",
-                "value": "C"
-            },
-            {
-                "label": "D. OPEN THE CLOSED EXIT WITHOUT AUTHORISATION",
-                "value": "D"
-            }
-        ],
-        "answerKey": "B"
-    }
-];
-const parts = {1:'PART I — OBJECTIVE THINKING',2:'PART II — ADVANCED QUANTITATIVE & LOGICAL REASONING',3:'PART III — DATA, SCIENTIFIC REASONING & APPLICATION',4:'PART IV — INTEGRATED DECISION CHALLENGES'};
-const READING_MS=15*60*1000, WRITING_MS=3*60*60*1000;
-let user=null, response={}, current=0, examDoc=null, timerHandle=null, saving=false, submitted=false, readingStartedAt=null, writingStartedAt=null;
-const $=id=>document.getElementById(id); const show=id=>$(id).classList.remove('hidden'); const hide=id=>$(id).classList.add('hidden');
-function status(id,msg){$(id).textContent=msg;}
 const CANDIDATES = [
     {
         "ht": "270034633744",
-        "dob": "24/11/2011",
+        "dob": "24/11/2012",
         "name": "ADITYA KUMAR"
     },
     {
         "ht": "270141830620",
-        "dob": "27/02/2011",
+        "dob": "27/02/2012",
         "name": "ARJUN REDDY"
     },
     {
         "ht": "270152986151",
-        "dob": "13/01/2011",
+        "dob": "13/01/2012",
         "name": "SAI TEJA"
     },
     {
         "ht": "270160760245",
-        "dob": "21/05/2011",
+        "dob": "21/05/2012",
         "name": "VISHNU VARDHAN"
     },
     {
         "ht": "270254060166",
-        "dob": "06/05/2011",
+        "dob": "06/05/2012",
         "name": "ROHIT SHARMA"
     },
     {
         "ht": "270371837702",
-        "dob": "25/04/2011",
+        "dob": "25/04/2012",
         "name": "PRANAV KUMAR"
     },
     {
         "ht": "270376242326",
-        "dob": "13/03/2011",
+        "dob": "13/03/2012",
         "name": "HARSHITH REDDY"
     },
     {
         "ht": "270406585782",
-        "dob": "22/02/2011",
+        "dob": "22/02/2012",
         "name": "KARTHIK SAI"
     },
     {
         "ht": "270466791833",
-        "dob": "13/12/2011",
+        "dob": "13/12/2012",
         "name": "NIKHIL VARMA"
     },
     {
         "ht": "270502540839",
-        "dob": "07/10/2011",
+        "dob": "07/10/2012",
         "name": "ABHINAV REDDY"
     },
     {
         "ht": "270503064215",
-        "dob": "14/02/2011",
+        "dob": "14/02/2012",
         "name": "MANOJ KUMAR"
     },
     {
         "ht": "270549809643",
-        "dob": "30/10/2011",
+        "dob": "30/10/2012",
         "name": "LOKESH SAI"
     },
     {
         "ht": "270674525654",
-        "dob": "05/08/2011",
+        "dob": "05/08/2012",
         "name": "AKHIL REDDY"
     },
     {
         "ht": "270771318613",
-        "dob": "17/01/2011",
+        "dob": "17/01/2012",
         "name": "SRIKAR VARMA"
     },
     {
         "ht": "270943721208",
-        "dob": "16/01/2011",
+        "dob": "16/01/2012",
         "name": "TEJASWIN KUMAR"
     },
     {
         "ht": "271018973320",
-        "dob": "17/02/2011",
+        "dob": "17/02/2012",
         "name": "RISHI KUMAR"
     },
     {
         "ht": "271126522723",
-        "dob": "22/04/2011",
+        "dob": "22/04/2012",
         "name": "VAMSI KRISHNA"
     },
     {
         "ht": "271152348733",
-        "dob": "30/04/2011",
+        "dob": "30/04/2012",
         "name": "SAI CHARAN"
     },
     {
         "ht": "271152447271",
-        "dob": "16/09/2011",
+        "dob": "16/09/2012",
         "name": "NAVEEN KUMAR"
     },
     {
         "ht": "271184502210",
-        "dob": "05/11/2011",
+        "dob": "05/11/2012",
         "name": "YASHWANTH REDDY"
     },
     {
         "ht": "271251745076",
-        "dob": "14/01/2011",
+        "dob": "14/01/2012",
         "name": "BHARATH KUMAR"
     },
     {
         "ht": "271262179838",
-        "dob": "15/10/2011",
+        "dob": "15/10/2012",
         "name": "CHANDRA SEKHAR"
     },
     {
         "ht": "271480708740",
-        "dob": "12/04/2011",
+        "dob": "12/04/2012",
         "name": "DHANUSH REDDY"
     },
     {
         "ht": "271558094672",
-        "dob": "29/11/2011",
+        "dob": "29/11/2012",
         "name": "ESHWAR KUMAR"
     },
     {
         "ht": "271577384560",
-        "dob": "22/12/2011",
+        "dob": "22/12/2012",
         "name": "GANESH REDDY"
     },
     {
         "ht": "271633204335",
-        "dob": "03/08/2011",
+        "dob": "03/08/2012",
         "name": "HARISH KUMAR"
     },
     {
         "ht": "271710918634",
-        "dob": "23/04/2011",
+        "dob": "23/04/2012",
         "name": "JAGADEESH REDDY"
     },
     {
         "ht": "271772514802",
-        "dob": "18/08/2011",
+        "dob": "18/08/2012",
         "name": "KIRAN KUMAR"
     },
     {
         "ht": "271799945463",
-        "dob": "29/10/2011",
+        "dob": "29/10/2012",
         "name": "LALITH SAI"
     },
     {
         "ht": "271821616267",
-        "dob": "23/05/2011",
+        "dob": "23/05/2012",
         "name": "MADHAV REDDY"
     },
     {
         "ht": "271836334222",
-        "dob": "04/01/2011",
+        "dob": "04/01/2012",
         "name": "NAGA SAI"
     },
     {
         "ht": "271862752664",
-        "dob": "23/03/2011",
+        "dob": "23/03/2012",
         "name": "OMKAR REDDY"
     },
     {
         "ht": "271885694422",
-        "dob": "19/12/2011",
+        "dob": "19/12/2012",
         "name": "PRUTHVI RAJ"
     },
     {
         "ht": "271904453957",
-        "dob": "24/06/2011",
+        "dob": "24/06/2012",
         "name": "RAHUL KUMAR"
     },
     {
         "ht": "271913445811",
-        "dob": "02/12/2011",
+        "dob": "02/12/2012",
         "name": "SANDEEP REDDY"
     },
     {
         "ht": "271959762410",
-        "dob": "21/03/2011",
+        "dob": "21/03/2012",
         "name": "TARUN KUMAR"
     },
     {
         "ht": "272032305394",
-        "dob": "21/04/2011",
+        "dob": "21/04/2012",
         "name": "UDAY KUMAR"
     },
     {
         "ht": "272297128739",
-        "dob": "22/06/2011",
+        "dob": "22/06/2012",
         "name": "VARUN REDDY"
     },
     {
         "ht": "272337004734",
-        "dob": "24/12/2011",
+        "dob": "24/12/2012",
         "name": "YOGESH KUMAR"
     },
     {
         "ht": "272382630635",
-        "dob": "16/12/2011",
+        "dob": "16/12/2012",
         "name": "ABHISHEK REDDY"
     },
     {
         "ht": "272711127886",
-        "dob": "14/07/2011",
+        "dob": "14/07/2012",
         "name": "AKASH KUMAR"
     },
     {
         "ht": "272762335687",
-        "dob": "19/02/2011",
+        "dob": "19/02/2012",
         "name": "ANIRUDH REDDY"
     },
     {
         "ht": "272897211578",
-        "dob": "03/07/2011",
+        "dob": "03/07/2012",
         "name": "ASHWIN KUMAR"
     },
     {
         "ht": "272988782785",
-        "dob": "26/06/2011",
+        "dob": "26/06/2012",
         "name": "BALAJI REDDY"
     },
     {
         "ht": "273116995064",
-        "dob": "06/11/2011",
+        "dob": "06/11/2012",
         "name": "CHAITANYA KUMAR"
     },
     {
         "ht": "273133294894",
-        "dob": "16/05/2011",
+        "dob": "16/05/2012",
         "name": "DARSHAN REDDY"
     },
     {
         "ht": "273206063067",
-        "dob": "23/01/2011",
+        "dob": "23/01/2012",
         "name": "DEEPAK KUMAR"
     },
     {
         "ht": "273236163536",
-        "dob": "24/08/2011",
+        "dob": "24/08/2012",
         "name": "GOKUL REDDY"
     },
     {
         "ht": "273277369926",
-        "dob": "02/10/2011",
+        "dob": "02/10/2012",
         "name": "HEMANTH KUMAR"
     },
     {
         "ht": "273327033821",
-        "dob": "05/03/2011",
+        "dob": "05/03/2012",
         "name": "JAYANTH REDDY"
     },
     {
         "ht": "273372348026",
-        "dob": "13/07/2011",
+        "dob": "13/07/2012",
         "name": "KIRAN VARMA"
     },
     {
         "ht": "273575190544",
-        "dob": "10/02/2011",
+        "dob": "10/02/2012",
         "name": "KRISHNA TEJA"
     },
     {
         "ht": "273608051427",
-        "dob": "10/10/2011",
+        "dob": "10/10/2012",
         "name": "MAHESH REDDY"
     },
     {
         "ht": "273733395087",
-        "dob": "31/05/2011",
+        "dob": "31/05/2012",
         "name": "MANIKANTA"
     },
     {
         "ht": "273794220772",
-        "dob": "05/07/2011",
+        "dob": "05/07/2012",
         "name": "NARESH KUMAR"
     },
     {
         "ht": "273798291677",
-        "dob": "23/10/2011",
+        "dob": "23/10/2012",
         "name": "NITHIN REDDY"
     },
     {
         "ht": "273807575953",
-        "dob": "09/04/2011",
+        "dob": "09/04/2012",
         "name": "PHANINDRA"
     },
     {
         "ht": "273826451651",
-        "dob": "05/02/2011",
+        "dob": "05/02/2012",
         "name": "PRADEEP KUMAR"
     },
     {
         "ht": "273835956576",
-        "dob": "24/01/2011",
+        "dob": "24/01/2012",
         "name": "RAKESH REDDY"
     },
     {
         "ht": "274018054585",
-        "dob": "27/04/2011",
+        "dob": "27/04/2012",
         "name": "RAM CHARAN"
     },
     {
         "ht": "274067733224",
-        "dob": "29/05/2011",
+        "dob": "29/05/2012",
         "name": "SANJAY KUMAR"
     },
     {
         "ht": "274076808421",
-        "dob": "10/11/2011",
+        "dob": "10/11/2012",
         "name": "SATYA SAI"
     },
     {
         "ht": "274137102309",
-        "dob": "14/12/2011",
+        "dob": "14/12/2012",
         "name": "SHARATH KUMAR"
     },
     {
         "ht": "274225372854",
-        "dob": "21/02/2011",
+        "dob": "21/02/2012",
         "name": "SIDDHARTH REDDY"
     },
     {
         "ht": "274418155872",
-        "dob": "21/11/2011",
+        "dob": "21/11/2012",
         "name": "SRIHARI"
     },
     {
         "ht": "274442716802",
-        "dob": "27/11/2011",
+        "dob": "27/11/2012",
         "name": "SUDHEER KUMAR"
     },
     {
         "ht": "274477274036",
-        "dob": "21/08/2011",
+        "dob": "21/08/2012",
         "name": "SURESH REDDY"
     },
     {
         "ht": "274484988359",
-        "dob": "06/07/2011",
+        "dob": "06/07/2012",
         "name": "TEJA KUMAR"
     },
     {
         "ht": "274617322508",
-        "dob": "25/03/2011",
+        "dob": "25/03/2012",
         "name": "UDIT REDDY"
     },
     {
         "ht": "274626628611",
-        "dob": "09/07/2011",
+        "dob": "09/07/2012",
         "name": "VAMSHI REDDY"
     },
     {
         "ht": "274759267429",
-        "dob": "01/07/2011",
+        "dob": "01/07/2012",
         "name": "VENKAT KUMAR"
     },
     {
         "ht": "274769884538",
-        "dob": "18/04/2011",
+        "dob": "18/04/2012",
         "name": "VINAY REDDY"
     },
     {
         "ht": "274793633207",
-        "dob": "17/05/2011",
+        "dob": "17/05/2012",
         "name": "VIVEK KUMAR"
     },
     {
         "ht": "274806292065",
-        "dob": "06/02/2011",
+        "dob": "06/02/2012",
         "name": "YASH KUMAR"
     },
     {
         "ht": "274924845643",
-        "dob": "29/03/2011",
+        "dob": "29/03/2012",
         "name": "ADARSH REDDY"
     },
     {
         "ht": "274976709106",
-        "dob": "01/10/2011",
+        "dob": "01/10/2012",
         "name": "AJAY KUMAR"
     },
     {
         "ht": "275008278012",
-        "dob": "27/12/2011",
+        "dob": "27/12/2012",
         "name": "ANAND REDDY"
     },
     {
         "ht": "275070611664",
-        "dob": "24/10/2011",
+        "dob": "24/10/2012",
         "name": "ARAVIND KUMAR"
     },
     {
         "ht": "275175581324",
-        "dob": "25/08/2011",
+        "dob": "25/08/2012",
         "name": "BHANU PRAKASH"
     },
     {
         "ht": "275178750431",
-        "dob": "28/10/2011",
+        "dob": "28/10/2012",
         "name": "CHARAN TEJA"
     },
     {
         "ht": "275236654257",
-        "dob": "19/05/2011",
+        "dob": "19/05/2012",
         "name": "DILEEP KUMAR"
     },
     {
         "ht": "275241586446",
-        "dob": "05/12/2011",
+        "dob": "05/12/2012",
         "name": "GANESH KUMAR"
     },
     {
         "ht": "275340691876",
-        "dob": "16/06/2011",
+        "dob": "16/06/2012",
         "name": "GOPI KRISHNA"
     },
     {
         "ht": "275504399733",
-        "dob": "29/01/2011",
+        "dob": "29/01/2012",
         "name": "HARI KRISHNA"
     },
     {
         "ht": "275523463897",
-        "dob": "28/04/2011",
+        "dob": "28/04/2012",
         "name": "JEEVAN REDDY"
     },
     {
         "ht": "275532977404",
-        "dob": "18/12/2011",
+        "dob": "18/12/2012",
         "name": "KALYAN KUMAR"
     },
     {
         "ht": "275557735489",
-        "dob": "11/06/2011",
+        "dob": "11/06/2012",
         "name": "KARTHIKEYA"
     },
     {
         "ht": "275657852017",
-        "dob": "25/07/2011",
+        "dob": "25/07/2012",
         "name": "KESHAV REDDY"
     },
     {
         "ht": "275770640509",
-        "dob": "18/05/2011",
+        "dob": "18/05/2012",
         "name": "LOHITH KUMAR"
     },
     {
         "ht": "275781810246",
-        "dob": "03/02/2011",
+        "dob": "03/02/2012",
         "name": "MOHAN REDDY"
     },
     {
         "ht": "275783105738",
-        "dob": "19/04/2011",
+        "dob": "19/04/2012",
         "name": "MUKESH KUMAR"
     },
     {
         "ht": "275851123750",
-        "dob": "06/10/2011",
+        "dob": "06/10/2012",
         "name": "NAVEEN REDDY"
     },
     {
         "ht": "276009697941",
-        "dob": "13/11/2011",
+        "dob": "13/11/2012",
         "name": "NIKHIL KUMAR"
     },
     {
         "ht": "276011669780",
-        "dob": "13/09/2011",
+        "dob": "13/09/2012",
         "name": "PRANITH REDDY"
     },
     {
         "ht": "276245179743",
-        "dob": "22/07/2011",
+        "dob": "22/07/2012",
         "name": "RAVI KUMAR"
     },
     {
         "ht": "276259740307",
-        "dob": "23/08/2011",
+        "dob": "23/08/2012",
         "name": "RUPESH REDDY"
     },
     {
         "ht": "276422510098",
-        "dob": "15/03/2011",
+        "dob": "15/03/2012",
         "name": "SAI KIRAN"
     },
     {
         "ht": "276446132677",
-        "dob": "16/11/2011",
+        "dob": "16/11/2012",
         "name": "SAI PRASAD"
     },
     {
         "ht": "276576661799",
-        "dob": "11/08/2011",
+        "dob": "11/08/2012",
         "name": "SAMARTH REDDY"
     },
     {
         "ht": "276658260565",
-        "dob": "07/05/2011",
+        "dob": "07/05/2012",
         "name": "SHIVA KUMAR"
     },
     {
         "ht": "276674085633",
-        "dob": "15/05/2011",
+        "dob": "15/05/2012",
         "name": "SHYAM REDDY"
     },
     {
         "ht": "276704408681",
-        "dob": "08/08/2011",
+        "dob": "08/08/2012",
         "name": "SOMESH KUMAR"
     },
     {
         "ht": "276738321413",
-        "dob": "24/07/2011",
+        "dob": "24/07/2012",
         "name": "SRIKANTH REDDY"
     },
     {
         "ht": "276789861974",
-        "dob": "07/11/2011",
+        "dob": "07/11/2012",
         "name": "SUDARSHAN"
     },
     {
         "ht": "276872816390",
-        "dob": "11/10/2011",
+        "dob": "11/10/2012",
         "name": "SUKESH REDDY"
     },
     {
         "ht": "276938159406",
-        "dob": "12/03/2011",
+        "dob": "12/03/2012",
         "name": "TANMAY KUMAR"
     },
     {
         "ht": "276997851781",
-        "dob": "10/09/2011",
+        "dob": "10/09/2012",
         "name": "TRINADH REDDY"
     },
     {
         "ht": "277048779372",
-        "dob": "16/02/2011",
+        "dob": "16/02/2012",
         "name": "VARDHAN REDDY"
     },
     {
         "ht": "277114617098",
-        "dob": "25/01/2011",
+        "dob": "25/01/2012",
         "name": "VIJAY KUMAR"
     },
     {
         "ht": "277215561502",
-        "dob": "26/02/2011",
+        "dob": "26/02/2012",
         "name": "VINOD REDDY"
     },
     {
         "ht": "277244693233",
-        "dob": "09/02/2011",
+        "dob": "09/02/2012",
         "name": "VISHAL KUMAR"
     },
     {
         "ht": "277336730000",
-        "dob": "10/06/2011",
+        "dob": "10/06/2012",
         "name": "YUVRAJ REDDY"
     },
     {
         "ht": "277348196365",
-        "dob": "31/10/2011",
+        "dob": "31/10/2012",
         "name": "ABHIJITH"
     },
     {
         "ht": "277515842288",
-        "dob": "28/09/2011",
+        "dob": "28/09/2012",
         "name": "AKSHAY REDDY"
     },
     {
         "ht": "277586431438",
-        "dob": "28/11/2011",
+        "dob": "28/11/2012",
         "name": "AMAN KUMAR"
     },
     {
         "ht": "277591383746",
-        "dob": "30/09/2011",
+        "dob": "30/09/2012",
         "name": "ANISH REDDY"
     },
     {
         "ht": "277605110146",
-        "dob": "02/06/2011",
+        "dob": "02/06/2012",
         "name": "ARYAN KUMAR"
     },
     {
         "ht": "277615152363",
-        "dob": "07/12/2011",
+        "dob": "07/12/2012",
         "name": "BHAVYA TEJA"
     },
     {
         "ht": "277632793683",
-        "dob": "12/12/2011",
+        "dob": "12/12/2012",
         "name": "CHIRANJEEVI"
     },
     {
         "ht": "277711783198",
-        "dob": "08/04/2011",
+        "dob": "08/04/2012",
         "name": "DEV KUMAR"
     },
     {
         "ht": "277735934860",
-        "dob": "06/09/2011",
+        "dob": "06/09/2012",
         "name": "DHRUV REDDY"
     },
     {
         "ht": "277791720290",
-        "dob": "20/12/2011",
+        "dob": "20/12/2012",
         "name": "GAUTHAM REDDY"
     },
     {
         "ht": "277952537666",
-        "dob": "25/09/2011",
+        "dob": "25/09/2012",
         "name": "GIRISH KUMAR"
     },
     {
         "ht": "277987636861",
-        "dob": "06/03/2011",
+        "dob": "06/03/2012",
         "name": "HITESH REDDY"
     },
     {
         "ht": "278201693648",
-        "dob": "22/05/2011",
+        "dob": "22/05/2012",
         "name": "JASHITH REDDY"
     },
     {
         "ht": "278211885657",
-        "dob": "09/08/2011",
+        "dob": "09/08/2012",
         "name": "KIRAN TEJA"
     },
     {
         "ht": "278307842859",
-        "dob": "03/01/2011",
+        "dob": "03/01/2012",
         "name": "KRISH REDDY"
     },
     {
         "ht": "278358290343",
-        "dob": "08/09/2011",
+        "dob": "08/09/2012",
         "name": "MANOJ REDDY"
     },
     {
         "ht": "278368266180",
-        "dob": "04/07/2011",
+        "dob": "04/07/2012",
         "name": "NANDAN KUMAR"
     },
     {
         "ht": "278534098582",
-        "dob": "30/01/2011",
+        "dob": "30/01/2012",
         "name": "NAVEEN TEJA"
     },
     {
         "ht": "278623150397",
-        "dob": "26/08/2011",
+        "dob": "26/08/2012",
         "name": "PRAVEEN REDDY"
     },
     {
         "ht": "278651230396",
-        "dob": "15/08/2011",
+        "dob": "15/08/2012",
         "name": "RAJESH KUMAR"
     },
     {
         "ht": "278659281331",
-        "dob": "04/10/2011",
+        "dob": "04/10/2012",
         "name": "RISHABH REDDY"
     },
     {
         "ht": "278690971575",
-        "dob": "12/07/2011",
+        "dob": "12/07/2012",
         "name": "ROHAN KUMAR"
     },
     {
         "ht": "278714312252",
-        "dob": "10/03/2011",
+        "dob": "10/03/2012",
         "name": "SAI ADITYA"
     },
     {
         "ht": "278758532334",
-        "dob": "16/07/2011",
+        "dob": "16/07/2012",
         "name": "SAI KUMAR"
     },
     {
         "ht": "278758976089",
-        "dob": "14/06/2011",
+        "dob": "14/06/2012",
         "name": "SATHWIK REDDY"
     },
     {
         "ht": "279158449843",
-        "dob": "18/10/2011",
+        "dob": "18/10/2012",
         "name": "SHASHANK REDDY"
     },
     {
         "ht": "279204461807",
-        "dob": "09/10/2011",
+        "dob": "09/10/2012",
         "name": "SRINIVAS KUMAR"
     },
     {
         "ht": "279269736509",
-        "dob": "17/03/2011",
+        "dob": "17/03/2012",
         "name": "VENKATESH REDDY"
     },
     {
         "ht": "279281965072",
-        "dob": "15/12/2011",
+        "dob": "15/12/2012",
         "name": "VIKRAM KUMAR"
     },
     {
         "ht": "279297648889",
-        "dob": "23/12/2011",
+        "dob": "23/12/2012",
         "name": "YOGI REDDY"
     },
     {
         "ht": "279421838671",
-        "dob": "02/11/2011",
+        "dob": "02/11/2012",
         "name": "ARUN KUMAR"
     },
     {
         "ht": "279482887296",
-        "dob": "01/01/2011",
+        "dob": "01/01/2012",
         "name": "JITHENDRA REDDY"
     },
     {
         "ht": "279593918835",
-        "dob": "14/10/2011",
+        "dob": "14/10/2012",
         "name": "RAGHAV REDDY"
     },
     {
         "ht": "279654325875",
-        "dob": "28/08/2011",
+        "dob": "28/08/2012",
         "name": "SAI NIKHIL"
     },
     {
         "ht": "279668272946",
-        "dob": "09/03/2011",
+        "dob": "09/03/2012",
         "name": "PRANAY KUMAR"
     },
     {
         "ht": "279758906371",
-        "dob": "09/05/2011",
+        "dob": "09/05/2012",
         "name": "VAMSI SAI"
     },
     {
         "ht": "279972214291",
-        "dob": "15/07/2011",
+        "dob": "15/07/2012",
         "name": "ADVAITH REDDY"
     },
     {
         "ht": "279072212295",
-        "dob": "15/02/2011",
+        "dob": "15/02/2012",
         "name": "KRISHNA REDDY"
     }
 ];
+const final_RESULTS = {
+  "270034633744": 98,
+  "270141830620": 65,
+  "270152986151": 75,
+  "270160760245": 78,
+  "270254060166": 80,
+  "270371837702": 88,
+  "270376242326": 65,
+  "270406585782": 75,
+  "270466791833": 78,
+  "270502540839": 80,
+  "270503064215": 83,
+  "270549809643": 88,
+  "270674525654": 94,
+  "270771318613": 65,
+  "270943721208": 71,
+  "271018973320": 73,
+  "271126522723": 75,
+  "271152348733": 78,
+  "271152447271": 79,
+  "271184502210": 80,
+  "271251745076": 83,
+  "271262179838": 84,
+  "271480708740": 88,
+  "271558094672": 91,
+  "271577384560": 94,
+  "271633204335": 95,
+  "271710918634": 65,
+  "271772514802": 71,
+  "271799945463": 73,
+  "271821616267": 74,
+  "271836334222": 75,
+  "271862752664": 76,
+  "271885694422": 78,
+  "271904453957": 79,
+  "271913445811": 80,
+  "271959762410": 83,
+  "272032305394": 84,
+  "272297128739": 88,
+  "272337004734": 91,
+  "272382630635": 94,
+  "272711127886": 95,
+  "272762335687": 65,
+  "272897211578": 66,
+  "272988782785": 70,
+  "273116995064": 71,
+  "273133294894": 72,
+  "273206063067": 73,
+  "273236163536": 74,
+  "273277369926": 75,
+  "273327033821": 76,
+  "273372348026": 78,
+  "273575190544": 79,
+  "273608051427": 80,
+  "273733395087": 82,
+  "273794220772": 83,
+  "273798291677": 84,
+  "273807575953": 85,
+  "273826451651": 87,
+  "273835956576": 88,
+  "274018054585": 90,
+  "274067733224": 91,
+  "274076808421": 94,
+  "274137102309": 95,
+  "274225372854": 65,
+  "274418155872": 66,
+  "274442716802": 67,
+  "274477274036": 68,
+  "274484988359": 69,
+  "274617322508": 70,
+  "274626628611": 71,
+  "274759267429": 72,
+  "274769884538": 73,
+  "274793633207": 74,
+  "274806292065": 75,
+  "274924845643": 76,
+  "274976709106": 78,
+  "275008278012": 79,
+  "275070611664": 80,
+  "275175581324": 82,
+  "275178750431": 83,
+  "275236654257": 84,
+  "275241586446": 85,
+  "275340691876": 87,
+  "275504399733": 88,
+  "275523463897": 89,
+  "275532977404": 90,
+  "275557735489": 91,
+  "275657852017": 93,
+  "275770640509": 94,
+  "275781810246": 95,
+  "275783105738": 65,
+  "275851123750": 66,
+  "276009697941": 67,
+  "276011669780": 68,
+  "276245179743": 69,
+  "276259740307": 70,
+  "276422510098": 71,
+  "276446132677": 72,
+  "276576661799": 73,
+  "276658260565": 74,
+  "276674085633": 75,
+  "276704408681": 76,
+  "276738321413": 78,
+  "276789861974": 79,
+  "276872816390": 80,
+  "276938159406": 81,
+  "276997851781": 82,
+  "277048779372": 83,
+  "277114617098": 84,
+  "277215561502": 85,
+  "277244693233": 86,
+  "277336730000": 87,
+  "277348196365": 88,
+  "277515842288": 89,
+  "277586431438": 90,
+  "277591383746": 91,
+  "277605110146": 92,
+  "277615152363": 93,
+  "277632793683": 94,
+  "277711783198": 95,
+  "277735934860": 65,
+  "277791720290": 66,
+  "277952537666": 67,
+  "277987636861": 68,
+  "278201693648": 69,
+  "278211885657": 70,
+  "278307842859": 71,
+  "278358290343": 72,
+  "278368266180": 73,
+  "278534098582": 74,
+  "278623150397": 75,
+  "278651230396": 76,
+  "278659281331": 78,
+  "278690971575": 79,
+  "278714312252": 80,
+  "278758532334": 81,
+  "278758976089": 82,
+  "279158449843": 83,
+  "279204461807": 84,
+  "279269736509": 85,
+  "279281965072": 86,
+  "279297648889": 87,
+  "279421838671": 88,
+  "279482887296": 89,
+  "279593918835": 90,
+  "279654325875": 91,
+  "279668272946": 92,
+  "279758906371": 93,
+  "279972214291": 94,
+  "279072212295": 95,
+};
+const $ = id => document.getElementById(id);
+const OPEN_MS = Date.parse(PORTAL_OPENS_AT);
+const CLOSE_MS = Date.parse(PORTAL_CLOSES_AT);
+let currentCandidate = null;
+let scheduleTimer = null;
 
-const STORAGE_PREFIX = 'cisceNexusTest1_2027_';
-const EXAM_DAY = '2026-11-22';
-const IST_OFFSET = '+05:30';
-const LOGIN_AT = new Date(`${EXAM_DAY}T09:40:00${IST_OFFSET}`).getTime();
-const READING_AT = new Date(`${EXAM_DAY}T09:45:00${IST_OFFSET}`).getTime();
-const WRITING_AT = new Date(`${EXAM_DAY}T10:00:00${IST_OFFSET}`).getTime();
-const WRITING_END = new Date(`${EXAM_DAY}T13:00:00${IST_OFFSET}`).getTime();
-const MANUAL_SUBMIT_AT = WRITING_AT + 60 * 60 * 1000; // MANUAL SUBMISSION OPENS AT 11:00 A.M. IST
-const PANEL_IDS = ['authPanel','preExamPanel','waitPanel','welcomePanel','readingPanel','examPanel','donePanel'];
-let scheduleInterval = null;
-let activePanel = '';
-function showOnly(id) {
-  if (activePanel === id) return false;
-  PANEL_IDS.forEach(panelId => hide(panelId));
-  show(id);
-  activePanel = id;
-  return true;
+function validSchedule(){
+  return Number.isFinite(OPEN_MS) && Number.isFinite(CLOSE_MS) && CLOSE_MS > OPEN_MS;
 }
-function validDate(value) {
-  const match = /^(\d{2})\/(\d{2})\/(\d{4})$/.exec(value);
-  if (!match) return false;
-  const day = Number(match[1]), month = Number(match[2]), year = Number(match[3]);
-  const date = new Date(year, month - 1, day);
-  return date.getFullYear() === year && date.getMonth() === month - 1 && date.getDate() === day;
+function formatIST(value){
+  return new Intl.DateTimeFormat('en-US',{timeZone:'Asia/Kolkata',day:'2-digit',month:'long',year:'numeric',hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:true}).format(new Date(value))+' (IST)';
 }
-function clock(ms) {
-  const seconds = Math.max(0, Math.ceil(ms / 1000));
-  const hours = Math.floor(seconds / 3600);
-  const minutes = Math.floor((seconds % 3600) / 60);
-  const remainder = seconds % 60;
-  return [hours, minutes, remainder].map(value => String(value).padStart(2, '0')).join(':');
+function countdown(ms){
+  const total=Math.max(0,Math.ceil(ms/1000));
+  const d=Math.floor(total/86400),h=Math.floor(total%86400/3600),m=Math.floor(total%3600/60),s=total%60;
+  return (d?String(d).padStart(2,'0')+'D ':'')+[h,m,s].map(v=>String(v).padStart(2,'0')).join(':');
 }
-function recordKey() { return STORAGE_PREFIX + user.ht; }
-let attempts = [];
-let activeAttemptIndex = -1;
-let candidateEmail = '';
-function ensureAttempt() {
-  if (activeAttemptIndex >= 0 && attempts[activeAttemptIndex]) return attempts[activeAttemptIndex];
-  const attempt = {
-    attemptNo: attempts.length + 1,
-    answers: {},
-    readingStartedAt: readingStartedAt || READING_AT,
-    writingStartedAt: writingStartedAt || WRITING_AT,
-    submitted: false,
-    submittedAt: null,
-    createdAt: Date.now()
-  };
-  attempts.push(attempt);
-  activeAttemptIndex = attempts.length - 1;
-  response = attempt.answers;
-  readingStartedAt = attempt.readingStartedAt;
-  writingStartedAt = attempt.writingStartedAt;
-  submitted = false;
-  return attempt;
+function showOnly(id){
+  ['openingPanel','authPanel','resultPanel','closedPanel'].forEach(panel=>$(panel)?.classList.add('hidden'));
+  $(id)?.classList.remove('hidden');
 }
-function persist() {
-  if (!user) return false;
-  try {
-    if (activeAttemptIndex >= 0 && attempts[activeAttemptIndex]) {
-      const attempt = attempts[activeAttemptIndex];
-      attempt.answers = response;
-      attempt.readingStartedAt = readingStartedAt;
-      attempt.writingStartedAt = writingStartedAt;
-      attempt.submitted = submitted;
-      attempt.email = candidateEmail;
-    }
-    networkStorage.setItem(recordKey(), JSON.stringify({
-      candidate: { ht: user.ht, name: user.name },
-      email: candidateEmail,
-      attempts,
-      updatedAt: Date.now()
-    }));
-    if (candidateEmail) networkStorage.setItem(STORAGE_PREFIX + 'email_' + user.ht, candidateEmail);
-    return true;
-  } catch (error) {
-    return false;
-  }
-}
-function loadRecord() {
-  try {
-    const raw = networkStorage.getItem(recordKey());
-    if (!raw) return null;
-    const saved = JSON.parse(raw);
-    if (!saved || !saved.candidate || saved.candidate.ht !== user.ht) return null;
-    // Migrate records created by the earlier single-attempt version.
-    if (!Array.isArray(saved.attempts)) {
-      saved.attempts = saved.writingStartedAt || saved.submitted ? [{
-        attemptNo: 1,
-        answers: saved.answers || {},
-        readingStartedAt: saved.readingStartedAt || null,
-        writingStartedAt: saved.writingStartedAt || null,
-        submitted: saved.submitted === true,
-        submittedAt: saved.submitted ? (saved.updatedAt || Date.now()) : null,
-        createdAt: saved.updatedAt || Date.now()
-      }] : [];
-    }
-    return saved;
-  } catch (error) {
-    return null;
-  }
-}
-function setCountdownText(id, milliseconds) {
-  const el = $(id);
-  if (el) el.textContent = clock(milliseconds);
-}
-function updatePreLogin(now) {
-  showOnly('preExamPanel');
-  setCountdownText('gateTimer', LOGIN_AT - now);
-  status('gateStatus', 'CANDIDATE LOGIN OPENS AT 9:40 A.M. (IST).');
-}
-function updateWait(now) {
-  showOnly('waitPanel');
-  setCountdownText('waitTimer', READING_AT - now);
-  status('waitTitle', 'QUESTION PAPER ACCESS OPENS IN');
-  status('waitMessage', 'CANDIDATE : ' + user.name + ' · HALL TICKET : ' + user.ht);
-}
-function renderReadingPaper() {
-  const preview = $('readingPaperPreview');
-  if (!preview || preview.dataset.rendered === 'yes') return;
-  preview.replaceChildren();
-  let lastSection = null;
-  questions.forEach((question, index) => {
-    if (question.section !== lastSection) {
-      lastSection = question.section;
-      const heading = document.createElement('div');
-      heading.className = 'paper-part';
-      heading.textContent = question.sectionTitle || ('PART ' + lastSection);
-      preview.append(heading);
-    }
-    const item = document.createElement('article');
-    item.className = 'paper-question';
-    const prompt = document.createElement('strong');
-    prompt.textContent = question.id + '. ' + question.prompt;
-    item.append(prompt);
-    if (Array.isArray(question.options)) {
-      question.options.forEach(option => {
-        const line = document.createElement('span');
-        line.className = 'paper-option';
-        line.textContent = option.label;
-        item.append(line);
-      });
-    }
-    preview.append(item);
-  });
-  preview.dataset.rendered = 'yes';
-}
-function updateReading(now) {
-  showOnly('readingPanel');
-  if (!readingStartedAt) readingStartedAt = READING_AT;
-  renderReadingPaper();
-  const duration = WRITING_AT - READING_AT;
-  const remaining = Math.max(0, WRITING_AT - now);
-  setCountdownText('readingTimer', remaining);
-  const progress = $('readingProgress');
-  if (progress) progress.style.width = Math.min(100, Math.max(0, (duration - remaining) / duration * 100)) + '%';
-  status('readingStatus', 'READ ONLY. ANSWERING AND SUBMISSION UNLOCK AUTOMATICALLY AT 10:00 A.M. (IST).');
-}
-function updateWriting(now) {
-  if (!writingStartedAt) {
-    writingStartedAt = WRITING_AT;
-    readingStartedAt = READING_AT;
-  }
-  if (activeAttemptIndex < 0) ensureAttempt();
-  const changed = showOnly('examPanel');
-  if (changed) renderQuestion();
-  setCountdownText('writingTimer', WRITING_END - now);
-  const submit = $('submitBtn');
-  if (submit) {
-    const canSubmit = now >= MANUAL_SUBMIT_AT;
-    submit.disabled = !canSubmit;
-    submit.textContent = canSubmit ? 'FINAL SUBMISSION' : 'SUBMISSION OPENS AT 11:00 A.M.';
-  }
-}
-function updateSchedule() {
-  const now = Date.now();
-  if (now < LOGIN_AT) {
-    updatePreLogin(now);
+function updatePortal(){
+  if(!validSchedule()){
+    showOnly('openingPanel');
+    $('gateCaption').textContent='PORTAL SCHEDULE CONFIGURATION ERROR';
+    $('gateTimer').textContent='CHECK DATES';
+    $('openingDateText').textContent='THE OPENING DATE AND CLOSING DATE MUST BE VALID, AND THE CLOSING TIME MUST BE AFTER THE OPENING TIME.';
     return;
   }
-  hide('preExamPanel');
-  if (!user) {
-    showOnly('authPanel');
-    return;
-  }
-  if (submitted) {
-    showOnly('donePanel');
-    updateSubmissionActions();
-    return;
-  }
-  if (now < READING_AT) {
-    updateWait(now);
-    return;
-  }
-  if (now < WRITING_AT) {
-    updateReading(now);
-    return;
-  }
-  if (now < WRITING_END) {
-    if (!writingStartedAt) {
-      writingStartedAt = WRITING_AT;
-      readingStartedAt = READING_AT;
-      ensureAttempt();
-      persist();
-    }
-    updateWriting(now);
-    return;
-  }
-  if (writingStartedAt) {
-    finalSubmit(true);
-  } else {
-    showOnly('donePanel');
-    status('doneTitle', 'EXAMINATION WINDOW CLOSED');
-    status('doneMessage', 'THE WRITING SESSION HAS ENDED. NO RESPONSE WAS STARTED.');
-    status('receipt', 'HALL TICKET : ' + user.ht);
+  const now=Date.now();
+  $('openingDateText').textContent='⭕ SCHEDULED OPENING : '+formatIST(OPEN_MS)+' ⭕ SCHEDULED CLOSING : '+formatIST(CLOSE_MS);
+  $('closingDateText').textContent='⭕ PORTAL CLOSED ON : '+formatIST(CLOSE_MS);
+  if(now<OPEN_MS){
+    currentCandidate=null;
+    showOnly('openingPanel');
+    $('gateCaption').textContent='RESULTS PORTAL OPENS IN';
+    $('gateTimer').textContent=countdown(OPEN_MS-now);
+  }else if(now<CLOSE_MS){
+    if($('resultPanel').classList.contains('hidden')) showOnly('authPanel');
+  }else{
+    currentCandidate=null;
+    showOnly('closedPanel');
   }
 }
-function startSchedule() {
-  if (scheduleInterval !== null) clearInterval(scheduleInterval);
-  updateSchedule();
-  scheduleInterval = setInterval(updateSchedule, 250);
+function validDate(value){
+  const match=/^(\d{2})\/(\d{2})\/(\d{4})$/.exec(value);
+  if(!match)return false;
+  const d=Number(match[1]),m=Number(match[2]),y=Number(match[3]);
+  const date=new Date(y,m-1,d);
+  return date.getFullYear()===y&&date.getMonth()===m-1&&date.getDate()===d;
 }
-function login() {
-  const now = Date.now();
-  if (now < LOGIN_AT) {
-    status('authStatus', 'CANDIDATE LOGIN OPENS AT 9:40 A.M. (IST).');
-    return;
-  }
-  const hallTicket = $('hallTicket').value.trim();
-  const dob = $('dobPassword').value.trim();
-  const email = $('candidateEmail').value.trim();
-  if (!/^\d{12}$/.test(hallTicket)) {
-    status('authStatus', 'PLEASE ENTER A VALID 12-DIGIT HALL TICKET NUMBER.');
-    return;
-  }
-  if (!validDate(dob)) {
-    status('authStatus', 'PLEASE ENTER THE DATE OF BIRTH IN DD/MM/YYYY FORMAT.');
-    return;
-  }
-  if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-    status('authStatus', 'A VALID EMAIL ID IS MANDATORY. PLEASE ENTER YOUR EMAIL ADDRESS TO CONTINUE.');
-    $('candidateEmail').focus();
-    return;
-  }
-  const candidate = CANDIDATES.find(item => item.ht === hallTicket && item.dob === dob);
-  if (!candidate) {
-    status('authStatus', 'INVALID DETAILS. PLEASE CHECK THE HALL TICKET NUMBER AND DATE OF BIRTH.');
-    return;
-  }
-  user = { ht: candidate.ht, name: candidate.name };
-  current = 0;
-  const saved = loadRecord();
-  attempts = saved && Array.isArray(saved.attempts) ? saved.attempts : [];
-  candidateEmail = email;
-  $('candidateEmail').value = candidateEmail;
-  activeAttemptIndex = attempts.length ? attempts.length - 1 : -1;
-  const active = activeAttemptIndex >= 0 ? attempts[activeAttemptIndex] : null;
-  response = active && active.answers && typeof active.answers === 'object' ? active.answers : {};
-  readingStartedAt = active ? (Number(active.readingStartedAt) || null) : null;
-  writingStartedAt = active ? (Number(active.writingStartedAt) || null) : null;
-  submitted = !!(active && active.submitted);
-  if (email) persist();
-  if (now >= READING_AT && now < WRITING_AT && !readingStartedAt) {
-    readingStartedAt = READING_AT;
-  }
-  if (now >= WRITING_AT && now < WRITING_END && !writingStartedAt && !submitted) {
-    readingStartedAt = READING_AT;
-    writingStartedAt = WRITING_AT;
-    ensureAttempt();
-    persist();
-  }
-  status('authStatus', 'AUTHENTICATION SUCCESSFUL.');
-  updateSchedule();
+function renderResult(candidate,marks){
+  const grade=marks>=90?'A':marks>=80?'B':marks>=70?'C':marks>=60?'D':marks>=50?'E':marks>=40?'P':'F';
+  $('resultCandidate').textContent='CANDIDATE : '+candidate.name+' · HALL TICKET : '+candidate.ht;
+  $('resultMarks').textContent=Number(marks).toFixed(2);
+  $('resultPercentage').textContent=Number(marks).toFixed(2)+'%';
+  $('resultGrade').textContent=grade;
+  $('resultReference').textContent='NX27-'+candidate.ht.slice(-8);
+  showOnly('resultPanel');
 }
-function openExam() {
-  if (activePanel !== 'examPanel') showOnly('examPanel');
-  renderQuestion();
-  updateSchedule();
+function login(){
+  updatePortal();
+  const now=Date.now();
+  if(now<OPEN_MS||now>=CLOSE_MS){$('authStatus').textContent='RESULTS PORTAL ACCESS IS NOT CURRENTLY AVAILABLE.';updatePortal();return;}
+  const ht=$('hallTicket').value.trim();
+  const dob=$('dobPassword').value.trim();
+  if(!/^\d{12}$/.test(ht)){$('authStatus').textContent='PLEASE ENTER A VALID 12-DIGIT HALL TICKET NUMBER.';$('hallTicket').focus();return;}
+  if(!validDate(dob)){$('authStatus').textContent='PLEASE ENTER THE DATE OF BIRTH IN DD/MM/YYYY FORMAT.';$('dobPassword').focus();return;}
+  const candidate=CANDIDATES.find(item=>item.ht===ht&&item.dob===dob);
+  if(!candidate){$('authStatus').textContent='INVALID DETAILS. PLEASE CHECK THE HALL TICKET NUMBER AND DATE OF BIRTH.';return;}
+  const marks=final_RESULTS[candidate.ht];
+  if(!Number.isFinite(marks)||marks<0||marks>100){$('authStatus').textContent='A VALID FINAL RESULT IS NOT CONFIGURED FOR THIS CANDIDATE. PLEASE CONTACT THE EXAMINATION ADMINISTRATOR.';return;}
+  currentCandidate=candidate;
+  renderResult(candidate,marks);
 }
-function renderQuestion() {
-  const question = questions[current];
-  if (!question) return;
-  $('partPill').textContent = 'PART ' + ['I', 'II', 'III', 'IV'][question.section - 1];
-  $('qCount').textContent = `QUESTION ${current + 1} OF ${questions.length} · ${question.marks} MARK${question.marks > 1 ? 'S' : ''}`;
-  $('partName').textContent = question.sectionTitle;
-  $('questionText').textContent = question.id + '. ' + question.prompt;
-  $('answerArea').replaceChildren();
-  const selected = response[question.id] || '';
-  if (question.type === 'mcq' && Array.isArray(question.options)) {
-    question.options.forEach(option => {
-      const label = document.createElement('label');
-      label.className = 'option';
-      const input = document.createElement('input');
-      input.type = 'radio';
-      input.name = 'answer';
-      input.value = option.value;
-      input.checked = selected === option.value;
-      input.addEventListener('change', () => setAnswer(question.id, option.value));
-      const textNode = document.createElement('span');
-      textNode.textContent = option.label;
-      label.append(input, textNode);
-      $('answerArea').append(label);
-    });
-  } else {
-    const message = document.createElement('p');
-    message.textContent = 'QUESTION FORMAT ERROR. PLEASE CONTACT THE EXAMINATION ADMINISTRATOR.';
-    $('answerArea').append(message);
-  }
-  $('prevBtn').disabled = current === 0;
-  $('nextBtn').textContent = current === questions.length - 1 ? 'REVIEW LAST QUESTION' : 'NEXT QUESTION →';
-  $('examProgress').style.width = ((current + 1) / questions.length * 100) + '%';
-  renderNav();
-}
-function setAnswer(questionId, value) {
-  response[questionId] = value;
-  renderNav();
-  if (persist()) {
-    status('saveState', 'RESPONSE SAVED ON THIS database.');
-  } else {
-    status('saveState', 'network IS SECURELY BUILT🔒. KEEP THIS PAGE OPEN.');
-  }
-}
-function renderNav() {
-  const box = $('questionNav');
-  box.replaceChildren();
-  questions.forEach((question, index) => {
-    const button = document.createElement('button');
-    button.type = 'button';
-    button.id = 'nav' + question.id;
-    button.className = 'secondary';
-    button.textContent = 'QUESTION ' + question.id;
-    if (String(response[question.id] || '').trim()) button.classList.add('answered');
-    if (index === current) button.style.outline = '3px solid var(--gold)';
-    button.addEventListener('click', () => {
-      current = index;
-      renderQuestion();
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-    box.append(button);
-  });
-}
-function updateSubmissionActions() {
-  const canRetake = Date.now() < WRITING_END && !!candidateEmail;
-  const retake = $('retakeBtn');
-  if (retake) retake.style.display = canRetake ? '' : 'none';
-  const emailButton = $('emailCopyBtn');
-  if (emailButton) emailButton.disabled = !candidateEmail;
-  status('retakeNotice', canRetake
-    ? 'YOU MAY START ANOTHER ATTEMPT BEFORE 1:00 P.M. (IST). EVERY ATTEMPT ENDS AT THE SAME OFFICIAL CLOSING TIME.'
-    : 'THE OFFICIAL WRITING SESSION HAS CLOSED. NO FURTHER RETAKES ARE PERMITTED.');
-}
-function finalSubmit(automatic) {
-  if (submitted || !user) return;
-  if (!automatic && Date.now() < MANUAL_SUBMIT_AT) {
-    alert('MANUAL SUBMISSION IS LOCKED. YOU MAY SUBMIT FROM 11:00 A.M. (IST).');
-    updateSchedule();
-    return;
-  }
-  if (activeAttemptIndex < 0) ensureAttempt();
-  submitted = true;
-  const active = attempts[activeAttemptIndex];
-  active.submittedAt = Date.now();
-  active.attemptNo = active.attemptNo || activeAttemptIndex + 1;
-  const saved = persist();
-  showOnly('donePanel');
-  status('doneTitle', automatic ? 'WRITING TIME EXPIRED' : 'RESPONSE SUBMITTED');
-  status('doneMessage', saved ? 'YOUR RESPONSE HAS BEEN SAVED ON THIS database.' : 'SUBMISSION COULD NOT BE SAVED IN PORTALPORTAL STORAGE.');
-  const answered = questions.filter(question => String(response[question.id] || '').trim()).length;
-  status('receipt', 'HALL TICKET : ' + user.ht + ' · ATTEMPT : ' + (active.attemptNo || activeAttemptIndex + 1) + ' · QUESTIONS ANSWERED : ' + answered + '/' + questions.length + ' · RECEIPT ID : ' + user.ht.slice(-8));
-  updateSubmissionActions();
-}
-function startRetake() {
-  if (!user || Date.now() >= WRITING_END) {
-    updateSubmissionActions();
-    return;
-  }
-  if (!submitted) return;
-  attempts.push({
-    attemptNo: attempts.length + 1,
-    answers: {},
-    readingStartedAt: READING_AT,
-    writingStartedAt: WRITING_AT,
-    submitted: false,
-    submittedAt: null,
-    createdAt: Date.now(),
-    email: candidateEmail
-  });
-  activeAttemptIndex = attempts.length - 1;
-  response = attempts[activeAttemptIndex].answers;
-  current = 0;
-  readingStartedAt = READING_AT;
-  writingStartedAt = WRITING_AT;
-  submitted = false;
-  persist();
-  updateSchedule();
-}
-function emailResponseCopy() {
-  if (!candidateEmail || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(candidateEmail)) {
-    alert('PLEASE ENTER A VALID EMAIL ID IN THE LOGIN SCREEN AND SIGN IN AGAIN.');
-    return;
-  }
-  const active = attempts[activeAttemptIndex] || { answers: response, attemptNo: activeAttemptIndex + 1 };
-  const answered = questions.filter(question => String((active.answers || {})[question.id] || '').trim()).length;
-  const marks = questions.reduce((total, question) => total + (((active.answers || {})[question.id] === question.answerKey) ? Number(question.marks || 1) : 0), 0);
-  const lines = [
-    'CISCE CLASS – IX NEXUS EXAMINATION : 2027',
-    'NEXUS TEST – 1 | CANDIDATE RESPONSE COPY',
-    'CANDIDATE : ' + user.name,
-    'HALL TICKET NUMBER : ' + user.ht,
-    'EMAIL ID : ' + candidateEmail,
-    'ATTEMPT : ' + (active.attemptNo || activeAttemptIndex + 1),
-    'QUESTIONS ANSWERED : ' + answered + '/' + questions.length,
-    'PROVISIONAL SCORE : ' + marks + '/' + questions.reduce((total, question) => total + Number(question.marks || 1), 0),
-    'SUBMISSION STATUS : ' + (active.submitted ? 'SUBMITTED' : 'IN PROGRESS'),
-    '',
-    'CANDIDATE RESPONSES (OPTION LETTERS):',
-    ...questions.map(q => 'QUESTION ' + q.id + ' : ' + ((active.answers || {})[q.id] || 'NOT ANSWERED')),
-    '',
-    'NOTE: THIS COPY IS GENERATED FROM THE RESPONSES SAVED IN THIS PORTAL. IT IS NOT AN OFFICIAL MARKSHEET.'
-  ];
-  const subject = 'CISCE CLASS – IX NEXUS TEST – 1 | RESPONSE COPY | ' + user.ht;
-  const mailto = 'mailto:' + encodeURIComponent(candidateEmail) + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(lines.join('\n'));
-  window.location.href = mailto;
-}
-function signOut() {
-  user = null;
-  response = {};
-  current = 0;
-  readingStartedAt = null;
-  writingStartedAt = null;
-  submitted = false;
-  attempts = [];
-  activeAttemptIndex = -1;
-  candidateEmail = '';
-  $('candidateEmail').value = '';
-  $('hallTicket').value = '';
-  $('dobPassword').value = '';
-  status('authStatus', 'SIGNED OUT. YOUR SAVED RESPONSE, IF ANY, REMAINS ON THIS database.');
-  updateSchedule();
-}
-
-$('loginBtn').addEventListener('click', login);
-$('retakeBtn').addEventListener('click', startRetake);
-$('emailCopyBtn').addEventListener('click', emailResponseCopy);
-$('hallTicket').addEventListener('input', event => {
-  event.target.value = event.target.value.replace(/\D/g, '').slice(0, 12);
+$('loginBtn').addEventListener('click',login);
+$('resultSignoutBtn')?.addEventListener('click',()=>{currentCandidate=null;$('hallTicket').value='';$('dobPassword').value='';showOnly('authPanel');$('authStatus').textContent='YOU HAVE BEEN SIGNED OUT OF THE RESULTS PORTAL.';});
+$('hallTicket').addEventListener('input',e=>{e.target.value=e.target.value.replace(/\D/g,'').slice(0,12);});
+$('dobPassword').addEventListener('input',e=>{
+  const digits=e.target.value.replace(/\D/g,'').slice(0,8);
+  e.target.value=digits.length>4?digits.slice(0,2)+'/'+digits.slice(2,4)+'/'+digits.slice(4):digits.length>2?digits.slice(0,2)+'/'+digits.slice(2):digits;
 });
-$('dobPassword').addEventListener('input', event => {
-  const digits = event.target.value.replace(/\D/g, '').slice(0, 8);
-  event.target.value = digits.length > 4
-    ? digits.slice(0, 2) + '/' + digits.slice(2, 4) + '/' + digits.slice(4)
-    : digits.length > 2 ? digits.slice(0, 2) + '/' + digits.slice(2) : digits;
-});
-$('hallTicket').addEventListener('keydown', event => {
-  if (event.key === 'Enter') $('dobPassword').focus();
-});
-$('dobPassword').addEventListener('keydown', event => {
-  if (event.key === 'Enter') $('candidateEmail').focus();
-});
-$('candidateEmail').addEventListener('keydown', event => {
-  if (event.key === 'Enter') login();
-});
-$('prevBtn').addEventListener('click', () => {
-  if (current > 0) { current--; renderQuestion(); }
-});
-$('nextBtn').addEventListener('click', () => {
-  if (current < questions.length - 1) { current++; renderQuestion(); }
-});
-$('submitBtn').addEventListener('click', () => {
-  if (Date.now() < MANUAL_SUBMIT_AT) {
-    alert('MANUAL SUBMISSION OPENS AT 11:00 A.M. (IST). PLEASE CONTINUE THE EXAMINATION.');
-    return;
-  }
-  const answered = questions.filter(question => String(response[question.id] || '').trim()).length;
-  if (window.confirm('YOU HAVE ANSWERED ' + answered + ' OF ' + questions.length + ' QUESTIONS. SUBMIT YOUR RESPONSE NOW? YOU CANNOT EDIT IT AFTERWARDS.')) {
-    finalSubmit(false);
-  }
-});
-$('signoutBtn').addEventListener('click', signOut);
-$('waitSignoutBtn').addEventListener('click', signOut);
-$('startBtn').addEventListener('click', () => {
-  status('savedInfo', 'THE EXAMINATION SCHEDULE IS AUTOMATIC. PLEASE WAIT FOR THE NEXT SCHEDULED STAGE.');
-});
-
-startSchedule();
+$('hallTicket').addEventListener('keydown',e=>{if(e.key==='Enter')$('dobPassword').focus();});
+$('dobPassword').addEventListener('keydown',e=>{if(e.key==='Enter')login();});
+// Enforce the closing time even when a candidate has already opened a result.
+updatePortal();
+scheduleTimer=setInterval(updatePortal,1000);
+window.addEventListener('pageshow',updatePortal);
+document.addEventListener('visibilitychange',()=>{if(!document.hidden)updatePortal();});
 </script>
- </body>
+</body>
 </html>
